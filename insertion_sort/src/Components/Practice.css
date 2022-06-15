@@ -1,0 +1,22 @@
+.frame{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  .container{
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    height: 200px;
+    margin:5em 0;
+    width:max-content
+  }
+  .card{
+  background: #818181;
+  padding: 0 1em;
+  border-radius: 2em;
+  }
+  
+  
