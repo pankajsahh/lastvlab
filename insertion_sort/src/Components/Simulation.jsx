@@ -2,26 +2,31 @@ import { useState } from "react";
 import Divbox from "./Divbox";
 
 const Simulation=()=>{
-    const colors=["#FF0000","00FF00","0000FF","FFFF50"]
+    const colors=["#FF0000","#00FF00","#0000FF","#FFFF50"]
     const algorithm=()=>{
-        for(let i=0;i<val;i++){
-            let key=array[i];
-            console.log(key)
+        console.log("Array before sorting ",array)
+        for(let i=1;i<val;i++){
+            let key=array.at(i);
+            
+            // console.log(key)
             let j=i-1;
-            while(j>=0 && array[j]>key){
-                array[j+1]=array[j];
+            while(j>=0 && array.at(j)>key){
+                array[j+1]=array.at(j);
                 j--;
             }array[j+1]=key;
         }
+        console.log(array)
     }
+    
     const [val,changeVal]=useState('');
-    const array=[''];
+    const array=[]; 
      const[errors,setErrors]=useState('');
     const handleChange=(e)=>{
         if(e.target.value>10){
             setErrors("*Max size=10")
         }
        else {changeVal(e.target.value);
+        console.log("value",val)
               setErrors("")}
     }
 
@@ -36,17 +41,20 @@ const Simulation=()=>{
     // })
     
     const generateElements =()=>{
+        
         for(let i=0;i<val;i++){
             array.push(generateRandom(10,100))
         }
-        console.log(array[0])
-        updateBoxes(array.map((item)=>{
-            return(<Divbox value={item}></Divbox>)
+
+        console.log("Array elements",array.at(0))
+        updateBoxes(array.map((item,index)=>{
+            console.log("Array index ",index)
+            return(<div className='inline w-2 border-2 border-slate-500 p-2 text-center self-center' key={index}>{item} </div>)
+            
         })
         )
-        algorithm();
     }
-    const [boxes,updateBoxes]=useState('');
+    const [boxes,updateBoxes]=useState();
     
     return (
         <div className="flex justify-evenly m-5">
@@ -58,6 +66,7 @@ const Simulation=()=>{
                 <br></br>
                 
                 <button className="p-2 bg-blue-600 text-white m-2 " onClick={generateElements}>Generate random elements.</button>
+                <button className="p-2 bg-blue-600 text-white m-2 " onClick={algorithm}>Start.</button>
                
             </div>
 

@@ -40,9 +40,9 @@ class Practice extends Component{
      },this.state.delay*i);
      i++;
    }
-   this.setState({
-     timeouts:timeouts,
-   });
+  //  this.setState({
+  //    timeouts:timeouts,
+  //  });
   };
 
   generateSteps=()=>{
@@ -101,6 +101,7 @@ clearColorKey=()=>{
       currentStep:0,
     },()=>this.generateSteps());
   };
+  
   render(){
     const bars=this.state.array.map((value,index)=>{
      return (<Bars 
@@ -112,6 +113,7 @@ clearColorKey=()=>{
         />
      );  
   });
+
     return (
       <div>
       <div className='app flex justify-end space-x-72'>

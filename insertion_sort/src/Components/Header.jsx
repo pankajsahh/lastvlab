@@ -12,7 +12,7 @@ const Header=(props)=>{
              <img className='h-12' src={college}></img>
             </div>
             <div>
-                <ul className=' check flex justify-center space-x-12 font-medium items-center'>
+                <ul className=' check flex justify-center space-x-12 font-bold items-center '>
                     <li className={props.stl}><Link  to='/'>Home</Link></li>
                     <li className=''>Introduction</li>
                     <li className={props.tl}><Link to='/Experiment'>Experiments</Link></li>

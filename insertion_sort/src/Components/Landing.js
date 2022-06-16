@@ -20,6 +20,7 @@ import ExperimentPage from './ExperimentPage';
 import Practice from './Practice';
 import TargetAudience from './TargetAudience';
 import Simulation from './Simulation';
+import References from './References';
 
 const Landing =()=>{
     return (
@@ -34,6 +35,9 @@ const Landing =()=>{
             
             <Route path='/Experiment' element={<><Header tl="text-red-500 underline"/><Experiment/></>}/> 
             <Route path='/InsertionSort' element={<ExperimentPage/>}/>
+            <Route path='/Aim' element={<ExperimentPage/>}/>
+            <Route path='/References' element={<><ExperimentHeader rf="text-red-500 underline"/><References/></>}/>
+
             <Route path='/Practice' element={<><ExperimentHeader pr='text-red-500 underline'/><Practice/></>}/>
             <Route path='/Target_Audience' element={<><Header tr="text-red-500 underline"/><TargetAudience/></>}/>
             <Route path='/Simulation' element={<><ExperimentHeader sml="text-red-500 underline"/><Simulation/></>}/>
