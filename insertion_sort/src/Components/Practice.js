@@ -101,6 +101,7 @@ clearColorKey=()=>{
       currentStep:0,
     },()=>this.generateSteps());
   };
+  
   render(){
     const bars=this.state.array.map((value,index)=>{
      return (<Bars 
@@ -112,6 +113,7 @@ clearColorKey=()=>{
         />
      );  
   });
+
     return (
       <div>
         <h3 className='text-xl font-semibold mt-5 underline text-center mb-4'>Instructions</h3>
@@ -123,6 +125,15 @@ clearColorKey=()=>{
       </div>
       <div>
       <div className='app flex justify-end space-x-72'>
+        <div className='self-center px-5'>
+          
+          <ul className='list-disc px-5'>
+            <li><b className='mb-1' >Key index is coloured <span className='text-red-500'>RED.</span></b></li><br/>
+           <li><b className='mb-1' >Two comparing indexes are coloured <span className='text-blue-500'>BLUE.</span></b></li> <br/>
+           <li><b className='mb-1'>Sorted numbers are coloured <span className='text-green-500'>GREEN.</span></b></li><br/>
+           <li><b className='mb-1'>Change array value manually using <i className='underline'>Increment</i> and <i className='underline'>Decrement</i> symbol.</b></li></ul>
+           
+        </div>
         <div className='frame'>
           <div className='card container self-center'>{bars}</div>
         </div>
@@ -130,9 +141,9 @@ clearColorKey=()=>{
       </div>
       
       <div className='text-center space-x-5'>
-      <button onClick={this.newArray} ><img src={refresh}></img></button>
+      <button onClick={this.newArray} className='hover:opacity-30' ><img src={refresh}></img></button>
 
-      <button onClick={this.handleStart} className=""><img src={start}></img></button>
+      <button onClick={this.handleStart} className="hover:opacity-30"><img src={start}></img></button>
       </div>
       </div>
       </div>
