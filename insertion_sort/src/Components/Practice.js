@@ -116,6 +116,14 @@ clearColorKey=()=>{
 
     return (
       <div>
+        <h3 className='text-xl font-semibold mt-5 underline text-center mb-4'>Instructions</h3>
+      <div className='m-5 p-2 flex justify-center rounded-md border border-black'>
+      <ul className='text-xl text-stone-800 p-3 list-disc list-inside bg-black-400'>
+        <li>Click on <img className='inline h-8 w-8' src={refresh}/> to generate a new array. </li>
+        <li>Click on <img className='inline h-8 w-8' src={start}/> to start the sorting of the array. </li>
+      </ul>
+      </div>
+      <div>
       <div className='app flex justify-end space-x-72'>
         <div className='self-center px-5'>
           
@@ -136,6 +144,7 @@ clearColorKey=()=>{
       <button onClick={this.newArray} className='hover:opacity-30' ><img src={refresh}></img></button>
 
       <button onClick={this.handleStart} className="hover:opacity-30"><img src={start}></img></button>
+      </div>
       </div>
       </div>
 

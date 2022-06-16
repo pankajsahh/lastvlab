@@ -20,6 +20,12 @@ import ExperimentPage from './ExperimentPage';
 import Practice from './Practice';
 import TargetAudience from './TargetAudience';
 import Simulation from './Simulation';
+
+import Introduction from './Introduction';
+import Objective from './Objective';
+import Feedback from './Feedback';
+import FeedbackForm from './FeedbackForm';
+
 import References from './References';
 
 const Landing =()=>{
@@ -32,6 +38,17 @@ const Landing =()=>{
        
             
             <Route path='/' element={<><Header stl="text-red-500 underline" /><LandingContent/></>}/>
+
+
+            <Route path='/Introduction' element={<><Header in="text-red-500 underline"/><Introduction/></>}/>
+
+            <Route path='/Objective' element={<><Header ob="text-red-500 underline"/><Objective/></>}/>
+            
+            <Route path='/Feedback' element={<><Header fb="text-red-500 underline"/><Feedback/></>}/>
+            <Route path='/FeedbackForm' element={<FeedbackForm/>}/>
+
+
+
             <Route path='/Target_Audience' element={<><Header tr="text-red-500 underline"/><TargetAudience/></>}/>
             <Route path='/Experiment' element={<><Header tl="text-red-500 underline"/><Experiment/></>}/>
             <Route path='/Experiment/InsertionSort' element={<ExperimentPage/>}/> 
@@ -42,9 +59,10 @@ const Landing =()=>{
             <Route path='/Experiment/InsertionSort/Practice' element={<><ExperimentHeader pr='text-red-500 underline'/><Practice/></>}/>
            
             <Route path='/Experiment/InsertionSort/Simulation' element={<><ExperimentHeader sml="text-red-500 underline"/><Simulation/></>}/>
+
             </Routes>
                 
-                <Footer/>
+            <Footer/>
         
                 </Router>
     );

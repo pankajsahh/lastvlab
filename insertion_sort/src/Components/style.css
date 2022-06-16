@@ -1,0 +1,6 @@
+#from_name, #email,#iname,#expno{
+    border: none;
+	padding:5px;
+    width:100%;
+    box-sizing: border-box; 
+}
