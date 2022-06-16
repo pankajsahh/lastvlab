@@ -133,9 +133,9 @@ clearColorKey=()=>{
       </div>
       
       <div className='text-center space-x-5'>
-      <button onClick={this.newArray} ><img src={refresh}></img></button>
+      <button onClick={this.newArray} className='hover:opacity-30' ><img src={refresh}></img></button>
 
-      <button onClick={this.handleStart} className=""><img src={start}></img></button>
+      <button onClick={this.handleStart} className="hover:opacity-30"><img src={start}></img></button>
       </div>
       </div>
 
