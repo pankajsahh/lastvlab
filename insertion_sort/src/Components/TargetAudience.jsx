@@ -2,13 +2,13 @@ import img2 from './img2.png'
 const TargetAudience=()=>{
     return (
         <div className="">
-                        <h1 className="text-3xl font-semibold  text-center mt-5 text-red-500 ">Virtual Lab On Sorting Algorithm</h1>
+                        <h1 className="text-3xl font-semibold  text-center mt-5 text-slate-500  ">Virtual Lab On Sorting Algorithm</h1>
 
-        <div className="flex justify-center items-center mt-5">
+        <div className="flex justify-center items-center mt-5 ">
 
-        <ul className="text-2xl font-semibold list-disc">
-        <li>UG
-            <ul className="list-disc list-inside">
+        <ul className="text-2xl font-semibold list-disc ">
+        <li >UG
+            <ul className="list-disc list-inside ">
                 <li>B. Tech/ B.E/ B.sc in Computer Science <br></br> Engineering /Information Technology</li>
             </ul>
         </li>
