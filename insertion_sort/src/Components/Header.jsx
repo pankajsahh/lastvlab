@@ -14,11 +14,11 @@ const Header=(props)=>{
             <div>
                 <ul className=' check flex justify-center space-x-12 font-medium items-center'>
                     <li className={props.stl}><Link  to='/'>Home</Link></li>
-                    <li className=''>Introduction</li>
+                    <li className={props.in}><Link to='/Introduction'>Introduction</Link></li>
                     <li className={props.tl}><Link to='/Experiment'>Experiments</Link></li>
-                    <li className=''>Objective</li>
+                    <li className={props.ob}><Link to='/Objective'>Objective</Link></li>
                     <li className={props.tr}><Link to='/Target_Audience'>Target Audience</Link></li>
-                    <li className=''>Feedback</li>
+                    <li className={props.fb}><Link to='/Feedback'>Feedback</Link></li>
                 </ul>
                 <hr></hr>
             </div>

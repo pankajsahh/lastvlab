@@ -23,7 +23,7 @@ const ExperimentHeader=(props)=>{
                     <li className=''>Procedure</li>
                     <li className={props.sml}><Link to='/Simulation'>Simulation</Link></li>
                     <li className=''>Posttest</li>
-                    <li className=''>References</li>
+                    <li className={props.rf}><Link to='/References'>References</Link></li>
                 </ul>
                 <hr></hr>
                 
