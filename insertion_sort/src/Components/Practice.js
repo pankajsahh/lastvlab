@@ -40,9 +40,9 @@ class Practice extends Component{
      },this.state.delay*i);
      i++;
    }
-  //  this.setState({
-  //    timeouts:timeouts,
-  //  });
+   this.setState({
+     timeouts:timeouts,
+   });
   };
 
   generateSteps=()=>{
@@ -117,6 +117,15 @@ clearColorKey=()=>{
     return (
       <div>
       <div className='app flex justify-end space-x-72'>
+        <div className='self-center px-5'>
+          
+          <ul className='list-disc px-5'>
+            <li><b className='mb-1' >Key index is coloured <span className='text-red-500'>RED.</span></b></li><br/>
+           <li><b className='mb-1' >Two comparing indexes are coloured <span className='text-blue-500'>BLUE.</span></b></li> <br/>
+           <li><b className='mb-1'>Sorted numbers are coloured <span className='text-green-500'>GREEN.</span></b></li><br/>
+           <li><b className='mb-1'>Change array value manually using <i className='underline'>Increment</i> and <i className='underline'>Decrement</i> symbol.</b></li></ul>
+           
+        </div>
         <div className='frame'>
           <div className='card container self-center'>{bars}</div>
         </div>
