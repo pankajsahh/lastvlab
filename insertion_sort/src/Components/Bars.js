@@ -4,7 +4,7 @@ const Bars=(props)=>{
     const [len,setlen]=useState(props.length);
 
     //  const colors=['#B4FEE7','#FD49A0', '#368980','#603F8B'];
-    const colors=['#B4FEE7','#0000ff','#00ff00','#ff0000'];
+    const colors=['#B4FEE7','#0000FF','#00FF00','#FF0000'];
 
      useEffect(()=>{
          setlen(props.length);

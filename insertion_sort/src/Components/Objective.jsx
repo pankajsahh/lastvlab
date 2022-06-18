@@ -2,7 +2,7 @@ import React from "react";
 
 const Objective=()=>{
     return (
-        <div className='flex justify-around pb-5'>
+        <div className='flex justify-around pb-5 '>
             <div className='m-5 p-5'>
                 <h1 className="text-3xl font-semibold mt-5 mb-4 text-center text-slate-500 ">Sorting Algorithms Virtual lab</h1>
                 <p className="text-xl font-light leading-relaxed mt-8 mb-4 text-stone-800">

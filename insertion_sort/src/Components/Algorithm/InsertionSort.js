@@ -10,8 +10,8 @@ const Insertion =(array,steps,colors)=>{
             array[j+1]=array[j];
             steps.push(array.slice());
             colorkey[i]=3;    
-            if(i==j+1){
-                colorkey[j+1]=4;
+            if(i===j+1){
+                colorkey[j+1]=3;
             }else{
                 colorkey[j+1]=1;
             }

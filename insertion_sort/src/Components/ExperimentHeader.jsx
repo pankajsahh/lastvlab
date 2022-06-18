@@ -1,30 +1,24 @@
 import vlab from './vlab.jpg';
 import college from './LOGO.png';
-import {
-    BrowserRouter as Router,
-    Routes,
-    Route,
-    Link
-  } from "react-router-dom";
-import Landing from './Landing';
+import { Link } from 'react-router-dom';
 const ExperimentHeader=(props)=>{
     return (
         
             <div className=' bg-white'>
-            <div className='flex justify-between py-3 px-14 mx-3'><img className='h-12 w-24' src={vlab}></img>
-             <img className='h-12' src={college}></img>
+            <div className='flex justify-between py-3 px-14 mx-3'><img className='h-12 w-24' src={vlab} alt="Can't load."></img>
+             <img className='h-12' src={college} alt="Can't load."></img>
             </div>
             <div>
                 <ul className='check flex justify-center space-x-12 font-bold items-center'>
-                    <li className=''><Link to='/'>Home</Link></li>
-                    <li className={props.stl}><Link to='/Experiment/InsertionSort/Aim'>Aim</Link></li>
+                <Link to='/'> <li className=''>Home</li></Link>
+                <Link to='/Experiment/InsertionSort/Aim'><li className={props.stl}>Aim</li></Link>
                     <li className=''>Theory</li>
-                    <li className={props.pr}><Link to='/Experiment/InsertionSort/Practice'>Practice</Link></li>
+                    <Link to='/Experiment/InsertionSort/Practice'><li className={props.pr}>Practice</li></Link>
                     <li className=''>Procedure</li>
-                    <li className={props.sml}><Link to='/Experiment/InsertionSort/Simulation'>Simulation</Link></li>
+                    <Link to='/Experiment/InsertionSort/Simulation'><li className={props.sml}>Simulation</li></Link>
                     <li className=''>Posttest</li>
 
-                    <li className={props.rf}><Link to='/Experiment/InsertionSort/References'>References</Link></li>
+                    <Link to='/Experiment/InsertionSort/References'><li className={props.rf}>References</li></Link>
 
                 </ul>
                 <hr></hr>

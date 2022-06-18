@@ -17,8 +17,7 @@ class Practice extends Component{
     currentStep:0,
     count:8,
     delay:1300,
-    algorithm:'InsertionSort',
-    value:'hii'
+    algorithm:'InsertionSort'
   };
  
   handleStart=()=>{
@@ -49,7 +48,6 @@ class Practice extends Component{
     let array=this.state.array.slice();
     let steps=this.state.steps.slice();
     let colors=this.state.colors.slice();
-    let value=this.state.value;
     // BubbleSort(array,0,steps,colors);
     InsertionSort(array,steps,colors);
     this.setState({
@@ -130,13 +128,13 @@ clearColorKey=()=>{
         <div className='frame'>
           <div className='card container self-center'>{bars}</div>
         </div>
-      <img src={PracticeIcon} className='float-right h-96'></img>
+      <img src={PracticeIcon} alt="Can't load." className='float-right h-96'></img>
       </div>
       
       <div className='text-center space-x-5'>
-      <button onClick={this.newArray} className='hover:opacity-30' ><img src={refresh}></img></button>
+      <button onClick={this.newArray} className='hover:opacity-30' ><img src={refresh} alt="Can't load."></img></button>
 
-      <button onClick={this.handleStart} className="hover:opacity-30"><img src={start}></img></button>
+      <button onClick={this.handleStart} className="hover:opacity-30"><img src={start} alt="Can't load."></img></button>
       </div>
       </div>
       </div>
