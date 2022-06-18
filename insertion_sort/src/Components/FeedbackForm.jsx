@@ -38,8 +38,8 @@ const FeedbackForm = () =>{
  
 
   return (
-    <div className='m-5 p-5 mt-2 grid place-items-center z-20'>
-    <h1 className="text-3xl font-semibold mt-2 mb-4 text-center text-cyan-500 ">Welcome to the Feedback Page!!</h1>
+    <div className='p-5 mt-2 grid place-items-center fixed z-10 -top-0.5 left-80 bottom-5'>
+    <h1 className="w-96 text-3xl font-semibold mt-2  text-center bg-white shadow-md rounded text-cyan-500 ">Feedback Form!!</h1>
     <div className="w-96">
   <Form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" onSubmit={handleOnSubmit}>
     <div className="mb-4">

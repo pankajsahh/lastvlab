@@ -45,7 +45,7 @@ const Landing =()=>{
             <Route path='/Objective' element={<><Header ob="text-red-500 underline"/><Objective/><Footer/></>}/>
             
             <Route path='/Feedback' element={<><Header fb="text-red-500 underline"/><Feedback/><Footer/></>}/>
-            <Route path='/Feedback/FeedbackForm' element={<FeedbackForm/>}/>
+            <Route path='/Feedback/FeedbackForm' element={<><Header fb="text-red-500 underline"/><Feedback/><Footer/><FeedbackForm/></>}/>
 
 
 
