@@ -1,5 +1,5 @@
 import ExperimentHeader from "./ExperimentHeader";
-import LandingContent from "./LandingContent";
+import Aim from "./InsertionSort/Aim";
 import Footer from "./Footer";
 import {Link,
     Routes,
@@ -10,7 +10,7 @@ const ExperimentPage=()=>{
     return (
         <>
        <ExperimentHeader stl='text-red-500 underline'/>
-       <LandingContent/>
+       <Aim/>
        {/* <Footer/> */}
        </>
     );
