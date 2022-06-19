@@ -51,7 +51,7 @@ class Practice extends Component{
     let colors=this.state.colors.slice();
     let value=this.state.value;
     // BubbleSort(array,0,steps,colors);
-    InsertionSort(array,steps,colors,value);
+    InsertionSort(array,steps,colors);
     this.setState({
       steps:steps,
       colors:colors,
@@ -116,6 +116,7 @@ clearColorKey=()=>{
 
     return (
       <div>
+      <div>
       <div className='app flex justify-end space-x-72'>
         <div className='self-center px-5'>
           
@@ -136,6 +137,7 @@ clearColorKey=()=>{
       <button onClick={this.newArray} className='hover:opacity-30' ><img src={refresh}></img></button>
 
       <button onClick={this.handleStart} className="hover:opacity-30"><img src={start}></img></button>
+      </div>
       </div>
       </div>
 
