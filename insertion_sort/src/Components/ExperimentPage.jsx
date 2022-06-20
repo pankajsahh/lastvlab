@@ -6,7 +6,7 @@ import {Link,
     BrowserRouter as Router,
     Route
 } from 'react-router-dom';
-const ExperimentPage=()=>{
+const ExperimentPage=(props)=>{
     return (
         <>
        <ExperimentHeader stl='text-red-500 underline'/>
