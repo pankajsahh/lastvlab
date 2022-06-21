@@ -1,16 +1,16 @@
 import ExperimentHeader from "./ExperimentHeader";
-import Aim from "./InsertionSort/Aim";
+import LandingContent from "./LandingContent";
 import Footer from "./Footer";
 import {Link,
     Routes,
     BrowserRouter as Router,
     Route
 } from 'react-router-dom';
-const ExperimentPage=(props)=>{
+const ExperimentPage=()=>{
     return (
         <>
        <ExperimentHeader stl='text-red-500 underline'/>
-       <Aim/>
+       <LandingContent/>
        {/* <Footer/> */}
        </>
     );
