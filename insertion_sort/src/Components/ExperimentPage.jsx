@@ -9,8 +9,12 @@ import {Link,
 const ExperimentPage=()=>{
     return (
         <>
-       <ExperimentHeader stl='text-red-500 underline'/>
+
+       <ExperimentHeader stl='text-blue-500 underline'/>
        <LandingContent/>
+
+       <Aim/>
+
        {/* <Footer/> */}
        </>
     );

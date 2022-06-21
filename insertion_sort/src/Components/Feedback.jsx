@@ -16,7 +16,7 @@ const Feedback=()=>{
             <img className="h-64 w-102 mb-0 mt-5" src={feedback}></img>
             </div>
         <button className="ml-10 bg-white hover:bg-blue-500 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
-            <Link to='/FeedbackForm' target="_blank">Feedback Form</Link>
+            <Link to='/Feedback/FeedbackForm'>Feedback Form</Link>
         </button>
         <p className="text-xl ml-10 font-light leading-relaxed mt-8 text-stone-800">
         Thank you for taking the time to read this.

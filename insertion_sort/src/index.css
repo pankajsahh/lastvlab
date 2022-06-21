@@ -18,10 +18,11 @@ code {
   padding: 8px;
 }
 .check li:hover{
-  background: rgb(19, 102, 44);
+  --tw-bg-opacity: 1;
+    color: rgb(59 130 246 / var(--tw-bg-opacity));
   text-decoration: underline;
   
-  color:white;
+  
   /* opacity: 0.5; */
   
 }

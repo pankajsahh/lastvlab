@@ -31,39 +31,40 @@ import References from './References';
 const Landing =()=>{
     return (
         
-        <Router>
-         
+        <Router>      
             <Routes>
+            <Route path='/' element={<><Header stl="text-blue-500 underline" /><LandingContent/><Footer/></>}/>
+            <Route path='/Introduction' element={<><Header in="text-blue-500 underline"/><Introduction/><Footer/></>}/>
+
+            <Route path='/Objective' element={<><Header ob="text-blue-500 underline"/><Objective/><Footer/></>}/>
             
-       
-            
-            <Route path='/' element={<><Header stl="text-red-500 underline" /><LandingContent/><Footer/></>}/>
+            <Route path='/Feedback' element={<><Header fb="text-blue-500 underline"/><Feedback/><Footer/></>}/>
 
+            <Route path='/Feedback/FeedbackForm' element={<><Header fb="text-blue-500 underline"/><Feedback/><Footer/><FeedbackForm/></>}/>
 
-            <Route path='/Introduction' element={<><Header in="text-red-500 underline"/><Introduction/><Footer/></>}/>
+            <Route path='/Target_Audience' element={<><Header tr="text-blue-500 underline"/><TargetAudience/><Footer/></>}/>
 
-            <Route path='/Objective' element={<><Header ob="text-red-500 underline"/><Objective/><Footer/></>}/>
-            
-            <Route path='/Feedback' element={<><Header fb="text-red-500 underline"/><Feedback/><Footer/></>}/>
-            <Route path='/FeedbackForm' element={<FeedbackForm/>}/>
+            <Route path='/Experiment' element={<><Header tl="text-blue-500 underline"/><Experiment/><Footer/></>}/>
 
-
-
-            <Route path='/Target_Audience' element={<><Header tr="text-red-500 underline"/><TargetAudience/><Footer/></>}/>
-            <Route path='/Experiment' element={<><Header tl="text-red-500 underline"/><Experiment/><Footer/></>}/>
             <Route path='/Experiment/InsertionSort' element={<><ExperimentPage/><Footer/></>}/> 
+<<<<<<< HEAD
+
+            <Route path='/Experiment/InsertionSort/Aim' element={<><ExperimentPage/><Footer/></>}/>
+
+            <Route path='/Experiment/InsertionSort/References' element={<><ExperimentHeader rf="text-blue-500 underline"/><References/><Footer/></>}/>
+
+            <Route path='/Experiment/InsertionSort/Practice' element={<><ExperimentHeader pr='text-blue-500 underline'/><Practice/><Footer/></>}/>
+=======
             <Route path='/Experiment/InsertionSort/Aim' element={<><ExperimentPage/><Footer/></>}/>
             <Route path='/Experiment/InsertionSort/References' element={<><ExperimentHeader rf="text-red-500 underline"/><References/><Footer/></>}/>
 
             <Route path='/Experiment/InsertionSort/Practice' element={<><ExperimentHeader pr='text-red-500 underline'/><Practice/><Footer/></>}/>
+>>>>>>> 4297c85812bef688c45fec967b46d9c04be9241a
            
-            <Route path='/Experiment/InsertionSort/Simulation' element={<><ExperimentHeader sml="text-red-500 underline"/><Simulation/><Footer/></>}/>
+            <Route path='/Experiment/InsertionSort/Simulation' element={<><ExperimentHeader sml="text-blue-500 underline"/><Simulation/><Footer/></>}/>
              
             </Routes>
-               
-            
-        
-                </Router>
+      </Router>
     );
 }
 

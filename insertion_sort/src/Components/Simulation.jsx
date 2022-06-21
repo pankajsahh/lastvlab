@@ -22,8 +22,8 @@ const Simulation=()=>{
     const array=[]; 
      const[errors,setErrors]=useState('');
     const handleChange=(e)=>{
-        if(e.target.value>10){
-            setErrors("*Max size=10")
+        if(e.target.value>8){
+            setErrors("*Max size=8")
         }
        else {changeVal(e.target.value);
         console.log("value",val)
@@ -49,7 +49,7 @@ const Simulation=()=>{
         console.log("Array elements",array.at(0))
         updateBoxes(array.map((item,index)=>{
             console.log("Array index ",index)
-            return(<div className='inline w-2 border-2 border-slate-500 p-2 text-center self-center' key={index}>{item} </div>)
+            return(<div className='inline border-2 border-slate-500 p-2 text-center self-center' key={index}>{item} </div>)
             
         })
         )
