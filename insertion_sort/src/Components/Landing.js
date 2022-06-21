@@ -49,20 +49,18 @@ const Landing =()=>{
             <Route path='/Experiment' element={<><Header tl="text-blue-500 underline"/><Experiment/><Footer/></>}/>
 
             <Route path='/Experiment/InsertionSort' element={<><ExperimentPage/><Footer/></>}/> 
-<<<<<<< HEAD
 
             <Route path='/Experiment/InsertionSort/Aim' element={<><ExperimentPage/><Footer/></>}/>
 
             <Route path='/Experiment/InsertionSort/References' element={<><ExperimentHeader rf="text-blue-500 underline"/><References/><Footer/></>}/>
 
             <Route path='/Experiment/InsertionSort/Practice' element={<><ExperimentHeader pr='text-blue-500 underline'/><Practice/><Footer/></>}/>
-=======
+
             <Route path='/Experiment/InsertionSort/Aim' element={<><ExperimentPage/><Footer/></>}/>
             <Route path='/Experiment/InsertionSort/References' element={<><ExperimentHeader rf="text-red-500 underline"/><References/><Footer/></>}/>
             <Route path='/Experiment/InsertionSort/Theory' element={<><Theory/></>}/>
             <Route path='/Experiment/InsertionSort/Practice' element={<><ExperimentHeader pr='text-red-500 underline'/><Practice/><Footer/></>}/>
->>>>>>> 4297c85812bef688c45fec967b46d9c04be9241a
-           
+
             <Route path='/Experiment/InsertionSort/Simulation' element={<><ExperimentHeader sml="text-blue-500 underline"/><Simulation/><Footer/></>}/>
              
             </Routes>

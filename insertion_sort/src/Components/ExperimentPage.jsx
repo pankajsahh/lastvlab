@@ -9,13 +9,14 @@ import {Link,
 const ExperimentPage=(props)=>{
     return (
         <>
-<<<<<<< HEAD
-       <ExperimentHeader stl='text-blue-500 underline'/>
-       <LandingContent/>
-=======
+
        <ExperimentHeader stl='text-red-500 underline'/>
        <Aim/>
->>>>>>> 4297c85812bef688c45fec967b46d9c04be9241a
+
+
+       {/* <Aim/> */}
+
+
        {/* <Footer/> */}
        </>
     );
