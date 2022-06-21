@@ -27,6 +27,8 @@ import Feedback from './Feedback';
 import FeedbackForm from './FeedbackForm';
 
 import References from './References';
+import Aim from './InsertionSort/Aim';
+import Theory from './InsertionSort/Theory';
 
 const Landing =()=>{
     return (
@@ -57,7 +59,7 @@ const Landing =()=>{
 =======
             <Route path='/Experiment/InsertionSort/Aim' element={<><ExperimentPage/><Footer/></>}/>
             <Route path='/Experiment/InsertionSort/References' element={<><ExperimentHeader rf="text-red-500 underline"/><References/><Footer/></>}/>
-
+            <Route path='/Experiment/InsertionSort/Theory' element={<><Theory/></>}/>
             <Route path='/Experiment/InsertionSort/Practice' element={<><ExperimentHeader pr='text-red-500 underline'/><Practice/><Footer/></>}/>
 >>>>>>> 4297c85812bef688c45fec967b46d9c04be9241a
            
