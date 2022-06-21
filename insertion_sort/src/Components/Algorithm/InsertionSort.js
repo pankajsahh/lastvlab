@@ -1,4 +1,4 @@
-const Insertion =(array,steps,colors)=>{
+const Insertion =(array,position,steps,colors)=>{
  
     let colorkey=colors[colors.length-1].slice();
     for(let i=1;i<array.length;i++){

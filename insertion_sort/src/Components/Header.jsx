@@ -6,7 +6,7 @@ const Header=(props)=>{
     return (
         
 <>
-        <div className='flex justify-between py-3 px-14 mx-3'><img className='h-12 w-24' alt="Can't load." src={vlab}></img>
+        <div className='flex justify-between py-3 px-14 mx-3 '><img className='h-12 w-24' alt="Can't load." src={vlab}></img>
              <img className='h-12' alt="Can't load." src={college}></img>
             </div>
             <div>

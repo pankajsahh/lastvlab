@@ -49,7 +49,7 @@ class Practice extends Component{
     let steps=this.state.steps.slice();
     let colors=this.state.colors.slice();
     // BubbleSort(array,0,steps,colors);
-    InsertionSort(array,steps,colors);
+    InsertionSort(array,0,steps,colors);
     this.setState({
       steps:steps,
       colors:colors,
@@ -101,7 +101,7 @@ clearColorKey=()=>{
   };
   
   render(){
-    const bars=this.state.array.map((value,index)=>{
+    let bars=this.state.array.map((value,index)=>{
      return (<Bars 
      key={index}
       index={index}

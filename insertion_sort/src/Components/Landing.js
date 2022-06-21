@@ -1,8 +1,5 @@
 
-import  img1 from './img1.png';
-import fb from './fb.png';
-import you from './you.png';
-import twit from './twit.png';
+
 import LandingContent from './LandingContent';
 import Experiment from './Experiment';
 import Footer from './Footer';
@@ -12,8 +9,8 @@ import React from "react";
 import {
   BrowserRouter as Router,
   Routes,
-  Route,
-  Link
+  Route
+  
 } from "react-router-dom";
 import ExperimentHeader from './ExperimentHeader';
 import ExperimentPage from './ExperimentPage';
@@ -27,8 +24,8 @@ import Feedback from './Feedback';
 import FeedbackForm from './FeedbackForm';
 
 import References from './References';
-import Aim from './InsertionSort/Aim';
 import Theory from './InsertionSort/Theory';
+import PostTest from './PostTest';
 
 const Landing =()=>{
     return (
@@ -62,6 +59,8 @@ const Landing =()=>{
             <Route path='/Experiment/InsertionSort/Practice' element={<><ExperimentHeader pr='text-red-500 underline'/><Practice/><Footer/></>}/>
 
             <Route path='/Experiment/InsertionSort/Simulation' element={<><ExperimentHeader sml="text-blue-500 underline"/><Simulation/><Footer/></>}/>
+
+            <Route path='/Experiment/InsertionSort/Posttest' element={<><ExperimentHeader pst='text-blue-500 underline'></ExperimentHeader><PostTest ></PostTest><Footer/></>}/>
              
             </Routes>
       </Router>

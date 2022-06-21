@@ -10,7 +10,7 @@ export default function Aim() {
         this expriment is to understand the working, implementation and different characteristics of 
         insertion sort with the help of examples and animations.</small>    
         </div>
-        <img src={aim}></img>
+        <img src={aim} alt="Can't Load."></img>
     </div>
   )
 }

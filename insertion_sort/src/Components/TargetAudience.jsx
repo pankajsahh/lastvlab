@@ -9,13 +9,13 @@ const TargetAudience=()=>{
         <ul className="text-2xl font-semibold list-disc ">
         <li >UG
             <ul className="list-disc list-inside ">
-                <li>B. Tech/ B.E/ B.sc in Computer Science <br></br> Engineering /Information Technology</li>
+                <li>B. Tech/ B.E/ B.Sc in Computer Science <br></br> Engineering /Information Technology.</li>
             </ul>
         </li>
         <li>PG
             <ul className="list-disc list-inside">
                 <li>
-                    MS/Ph. D. Beginners in Computer Science <br></br> Enginerring/Information Technology
+                    M.Sc/Ph. D. Beginners in Computer Science <br></br> Enginerring/Information Technology.
                 </li>
             </ul>
         </li>
