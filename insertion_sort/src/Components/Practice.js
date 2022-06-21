@@ -96,7 +96,7 @@ clearColorKey=()=>{
     this.setState({
       array:array,
       steps:[array],
-      currentStep:0,
+      currentStep:0
     },()=>this.generateSteps());
   };
   
