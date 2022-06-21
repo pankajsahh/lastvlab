@@ -13,7 +13,7 @@ const ExperimentPage=()=>{
        <ExperimentHeader stl='text-blue-500 underline'/>
        <LandingContent/>
 
-       <Aim/>
+       {/* <Aim/> */}
 
        {/* <Footer/> */}
        </>
