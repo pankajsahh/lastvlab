@@ -15,6 +15,8 @@ import {
 import ExperimentHeader from './ExperimentHeader';
 import ExperimentPage from './ExperimentPage';
 import Practice from './Practice';
+// import Practice1 from './Practice1';
+
 import TargetAudience from './TargetAudience';
 import Simulation from './Simulation';
 

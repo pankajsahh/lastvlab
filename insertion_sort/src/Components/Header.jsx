@@ -6,11 +6,11 @@ const Header=(props)=>{
     return (
         
 <>
-        <div className='flex justify-between py-3 px-14 mx-3 '><img className='h-12 w-24' alt="Can't load." src={vlab}></img>
-             <img className='h-12' alt="Can't load." src={college}></img>
+        <div className='flex justify-between py-3 px-14 mx-3 '><a href='https://vlab.co.in/' target="_blank"><img className='h-14 w-24' alt="Can't load." src={vlab}></img></a>
+             <a href='https://www.andcollege.du.ac.in/' target='_blank'><img className='h-14 w-24' alt="Can't load." src={college}></img></a>
             </div>
             <div>
-                <ul className=' check flex justify-center space-x-12 font-bold items-center sm:space-x-5 md:space-x-10'>
+                <ul className=' check flex justify-center space-x-12 font-bold items-center sm:space-x-5 md:space-x-10 '>
                 <Link  to='/'><li className={props.stl}>Home</li></Link>
                 <Link to='/Introduction'>   <li className={props.in}>Introduction</li></Link>
                 <Link to='/Experiment'>  <li className={props.tl}>Experiments</li></Link>

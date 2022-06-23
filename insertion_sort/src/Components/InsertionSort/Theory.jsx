@@ -18,12 +18,13 @@ const Theory = () => {
           <li>It is an efficient algorithm for sorting a small number of elements.</li>
           <li>It is an inplace algorithm i.e. it rearranges the number within an array.</li>
           <li>It is a stable algorithm i.e. it maintains the relative order of elements.</li>
-          <li>It sorts the array in O(n<sup>2</sup>) time and occupy O(1) space.</li>
+          <li>It sorts the array in O(n<sup>2</sup>) time in worst case and in O(n) time in best case.</li>
+          <li>The space complexity is O(1).</li>
         </ul><br />
         <h4 className='text-lg underline font-bold text-slate-500'>Insertion Sort Algorithm</h4>
         <small className='text-lg font-thin'>In order to sort an array in ascending order:</small>
         <ul className='font-thin text-lg list-disc'>
-          <li>Iterate from arr[0] to arr[n-1] over the array.</li>
+          <li>Iterate from arr[1] to arr[n-1] over the array.</li>
           <li>Compare the current element (key) to its predecessor.</li>
           <li>If the key element is smaller than its predecessor, compare it to the elements before.</li>
           <li>Move the greater elements one position up to make space for the swapped element.</li>

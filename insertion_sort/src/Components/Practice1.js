@@ -1,25 +1,25 @@
 import React, { Component } from 'react';
-import Bar from './Bar';
-import Form from './Form';
-import practice from './practice.png'
+import Bar from './Bar1';
+// import Form from './components/Form';
+
 // Algorithms
 // import BubbleSort from './algorithms/BubbleSort';
 // import MergeSort from './algorithms/MergeSort';
 // import QuickSort from './algorithms/QuickSort';
-import InsertionSort from './Algorithm/InsertionSort';
+import InsertionSort from './Algorithm/InsertionSort1';
 // import SelectionSort from './algorithms/SelectionSort';
 
 // Icons
 import Play from '@material-ui/icons/PlayCircleOutlineRounded';
 import Forward from '@material-ui/icons/SkipNextRounded';
 import Backward from '@material-ui/icons/SkipPreviousRounded';
-import Pause from '@material-ui/icons/PauseCircleOutline';
+// import Pause from '@material-ui/icons/PauseCircleOutline';
 import RotateLeft from '@material-ui/icons/RotateLeft';
 
 // Styles
-import '../styles/RiseUpText/RiseUpText.css';
-import { riseText } from '../styles/RiseUpText/RiseUpText';
-import './Practice.css';
+import './styles/RiseUpText.css';
+import { riseText } from './styles/RiseUpText';
+import './Practice1.css';
 
 class App extends Component {
 	state = {
@@ -30,7 +30,7 @@ class App extends Component {
 		timeouts: [],
 		currentStep: 0,
 		barCount: 10,
-		delay: 1200,
+		delay: 300,
 		algorithm: 'Insertion Sort',
 	};
 
@@ -226,20 +226,14 @@ class App extends Component {
 
 		return (
 			<div className='app'>
-				
+				<h1 className='page-header_title risetext'>
+					<span className='page-header_title-main enclose'>
+						Sorting Visualizer
+					</span>
+				</h1>
 				
 				<div className='frame'>
-					<div><ul className='list-disc px-5'>
-					<li><b className='mb-1' >Unsorted numbers are coloured <span className='text-cyan-500'>AQUA.</span></b></li><br/>
-            <li><b className='mb-1' >Key index will be coloured <span className='text-red-500'>RED.</span></b></li><br/>
-           <li><b className='mb-1' >Two comparing indexes will be coloured <span className='text-blue-500'>BLUE.</span></b></li> <br/>
-           <li><b className='mb-1'>Sorted numbers will be coloured <span className='text-green-500'>GREEN.</span></b></li><br/>
-           <li><b className='mb-1'>Iteration will skip if numbers are in correct order.</b></li><br/>
-		   <li><b className='mb-1'>Use Play button to start execution.</b></li><br/>
-		   <li><b className='mb-1'>Use Forward or Backward button to see execution step by step.</b></li></ul>
-					</div>
 					<div className='barsDiv container card'>{barsDiv}</div>
-					<div><img src={practice} alt="Can't load" className='w-96'></img></div>
 				</div>
 				
 				<div className='control-pannel'>
@@ -255,7 +249,7 @@ class App extends Component {
 				</div>
 				
 				<div className='pannel'>
-					{/* <Form
+					<Form
 						formLabel='Algorithms'
 						values={[
 							'Bubble Sort',
@@ -273,21 +267,21 @@ class App extends Component {
 						]}
 						currentValue={this.state.algorithm}
 						onChange={this.changeAlgorithm}
-					/> */}
-					{/* <Form
+					/>
+					<Form
 						formLabel='Items'
 						values={[10, 15, 20, 25, 30]}
 						labels={[10, 15, 20, 25, 30]}
 						currentValue={this.state.barCount}
 						onChange={this.changeBarCount}
-					/> */}
-					{/* <Form
+					/>
+					<Form
 						formLabel='Speed'
 						values={[500, 400, 300, 200, 100]}
 						labels={['1x', '2x', '3x', '4x', '5x']}
 						currentValue={this.state.delay}
 						onChange={this.changeSpeed}
-					/> */}
+					/>
 				</div>
 			</div>
 		);
