@@ -28,6 +28,8 @@ import FeedbackForm from './FeedbackForm';
 import References from './References';
 import Theory from './InsertionSort/Theory';
 import PostTest from './PostTest';
+import PostTestB from './PostTest (1)';
+
 
 const Landing =()=>{
     return (

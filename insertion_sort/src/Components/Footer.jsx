@@ -3,31 +3,31 @@ import you from './you.png';
 import twit from './twit.png';
 const Footer =()=>{
     return (
-        <div className='bg-black mt-5 align-bottom mb-0 fixed h-1/5 inset-x-0 bottom-0'>
+        <div className='bg-black   mb-0 fixed h-1/5 inset-x-0 bottom-0'>
         <div className='flex justify-evenly '>
-            <div className='text-white'><b>Community Links</b>
+            <div className='text-white'><p className='sm:font-bold'>Community Links</p>
             <hr></hr>
             <ul >
-             <li className='hover:underline'><a href='http://proposal.sakshat.ac.in/scholarship'>Sakshat Portal </a></li>
-             <li className='hover:underline'><a href='http://outreach.vlabs.ac.in/'>Outreach  Portal</a></li> 
-             <li className='hover:underline'><a href='https://www.vlab.co.in/faq'>Vlab FAQ:</a></li>  
+             <li className='hover:underline text-sm sm:text-base'><a href='http://proposal.sakshat.ac.in/scholarship'>Sakshat Portal </a></li>
+             <li className='hover:underline text-sm sm:text-base'><a href='http://outreach.vlabs.ac.in/'>Outreach  Portal</a></li> 
+             <li className='hover:underline text-sm sm:text-base'><a href='https://www.vlab.co.in/faq'>Vlab FAQ:</a></li>  
                 </ul></div>
-            <div className='text-white'><b>Contact Us</b>
+            <div className='text-white'><p className="sm:font-bold">Contact Us</p>
             <hr></hr>
             <ul>
-                <li>Phone: General Information: 011-26582050</li>
-                <li>
+                <li className='text-sm sm:text-base'>Phone: General Information: 011-26582050</li>
+                <li className='text-sm sm:text-base'>
                 Email: support@vlabs.ac.in
                 </li>
             </ul>
             </div>
-            <div className='text-white'><b>Follow us</b>
+            <div className='text-white'><p className='sm:font-bold '>Follow us</p>
             <hr>
             </hr>
             <ul className='flex'>
-                <li className='hover:underline'><a href='https://www.facebook.com/VLabsIITDelhi/'><img  src={fb} alt="Can't load."></img></a></li>
-                <li className='hover:underline'><a href='https://www.youtube.com/watch?v=asxRaOgk6a0'><img src={you} alt="Can't load."></img></a></li>
-                <li className='hover:underline'><a href='https://twitter.com/TheVirtualLabs'><img src={twit} alt="Can't load."></img></a></li>
+                <li className='hover:underline text-sm sm:text-base'><a href='https://www.facebook.com/VLabsIITDelhi/'><img  src={fb} alt="Can't load."></img></a></li>
+                <li className='hover:underline text-sm sm:text-base'><a href='https://www.youtube.com/watch?v=asxRaOgk6a0'><img src={you} alt="Can't load."></img></a></li>
+                <li className='hover:underline text-sm sm:text-base'><a href='https://twitter.com/TheVirtualLabs'><img src={twit} alt="Can't load."></img></a></li>
             </ul>
             </div>
         </div>
