@@ -36,24 +36,37 @@
     position: relative;
   }
   
-  .question-count {
+  #question-count {
     margin-bottom: 20px;
   }
   
-  .question-count span {
+  #question-count span {
     font-size: 28px;
   }
   
   .question-text {
-    margin-bottom: 12px;
+    margin-bottom: 20px 0;
   }
 
-
+#nxt{
+  background-color: #252d4a;
+  color: white;
+  /* padding: 5px; */
+  padding: 10px;
+  width: max-content;
+  border-radius: 10px;
+  
+  
+}
+#nxt:hover{
+  opacity: 0.5;
+}
   .answer-section {
     width: 30%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: end;
   }
   
   
