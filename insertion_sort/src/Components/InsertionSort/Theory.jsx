@@ -1,6 +1,7 @@
 import React from 'react'
 import ExperimentHeader from '../ExperimentHeader';
-import theory from '../Theory.png'
+import theory from '../Theory.jpg'
+import theory1 from '../Theory1.png'
 
 const Theory = () => {
   return (
@@ -28,10 +29,16 @@ const Theory = () => {
           <li>Compare the current element (key) to its predecessor.</li>
           <li>If the key element is smaller than its predecessor, compare it to the elements before.</li>
           <li>Move the greater elements one position up to make space for the swapped element.</li>
-        </ul> 
+        </ul><br />
+        <h4 className='text-lg underline font-bold text-slate-500'>Example</h4>
+        <small className='text-lg font-bold'>Input: </small> 
+        <small className='text-lg font-thin'>15, 9, 30, 10, 1</small><br />
+        <small className='text-lg font-bold'>Expected Output: </small> 
+        <small className='text-lg font-thin'>1, 9, 10, 15, 30</small>
         </div>
-        <img src={theory} alt="Can't Load."></img>
+        <img src={theory} alt="Sorting cards" className='object-scale-down' width=""/>
     </div>
+    <img src={theory1} alt=""/>
     </>
   )
 }
