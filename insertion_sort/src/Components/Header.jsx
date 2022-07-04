@@ -43,7 +43,7 @@ const Header=(props)=>{
         
 <>
         <div className='sticky sm:flex sm:justify-between sm:py-3 sm:px-14 sm:mx-3 flex justify-between p-2 '><a href='https://vlab.co.in/' target="_blank"><img className='h-14 w-24 ' alt="Can't load." src={vlab}></img></a>
-             <a href='https://www.andcollege.du.ac.in/' target='_blank'><img className='h-14 w-24' alt="Can't load." src={college}></img></a>
+             <a href='https://www.andcollege.du.ac.in/' target='_blank'><img className='h-16' alt="Can't load." src={college}></img></a>
             </div>
             <div className=' justify-end'>
                 <span  className='text-3xl cursor-pointer sm:hidden block'><ion-icon id="menu" name="menu-outline" onClick={menuSelect}></ion-icon></span>

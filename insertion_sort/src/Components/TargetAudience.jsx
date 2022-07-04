@@ -6,7 +6,7 @@ const TargetAudience=()=>{
 
         <div className="flex justify-center items-center p-5 md:p-5 md:ml-2">
 
-        <ul className="pl-5 text-xs md:text-2xl font-medium md:font-semibold list-disc ">
+        <ul className="pl-5 text-xs md:text-2xl font-medium md:font-semibold list-disc text-slate-600">
         <li >UG
             <ul className="list-disc list-inside ">
                 <li>B. Tech/ B.E/ B.Sc in Computer Science <br></br> Engineering /Information Technology.</li>

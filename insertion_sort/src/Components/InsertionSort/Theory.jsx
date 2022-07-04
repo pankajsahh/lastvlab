@@ -7,7 +7,7 @@ const Theory = () => {
   return (
     <>
     <ExperimentHeader th='text-blue-500 underline'/>
-    <div className='flex justify-around pb-5'>
+    <div className='flex justify-around pb-5 '>
         <div className='m-10 p-5'>
         <h3 className='font-semibold text-center p-7 text-3xl tracking-wider text-slate-500'>Theory</h3>
         <small className='font-thin text-lg'>Insertion sort is a simple sorting algorithm 

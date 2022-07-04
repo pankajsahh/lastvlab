@@ -20,7 +20,7 @@ const Feedback=()=>{
         <button className="sm:ml-10 ml-3 bg-white hover:bg-blue-500 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
             <Link to='/Feedback/FeedbackForm'>Feedback Form</Link>
         </button>
-        <p className="text-lg sm:text-xl sm:ml-10 ml-3 font-light sm:leading-relaxed sm:mt-8 text-stone-800 pt-2">
+        <p className="text-lg sm:text-xl sm:ml-10 ml-3 font-light sm:leading-relaxed sm:mt-8 lg:mt-5 text-stone-800 pt-2">
         Thank you for taking the time to read this.
         </p>
         <h3 className="text-lg sm:text-xl ml-10 font-medium mt-2 text-stone-900">Virtual Labs' Team</h3>

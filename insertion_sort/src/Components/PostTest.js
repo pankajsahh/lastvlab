@@ -4,7 +4,7 @@ import crown from './crown.png'
 import quiz from './quiz.png'
 function PostTest() {
   let ch = <>
-    <ul className="list-disc list-inside">
+    <ul className="list-decimal list-inside">
       <li className="font-bold text-left text-lg">This quiz consists of three questions.</li>
       <li className="font-bold text-left text-lg">Four options will be given to each question.</li>
       <li className="font-bold text-left text-lg">You cannot change your answer once it is selected.</li>
@@ -44,7 +44,7 @@ function PostTest() {
     },
 
     {
-      questionText: 'For the following question, how will the array elements look like after the second pass?  34,8,64,51,32,21',
+      questionText: 'For the following question, how will the array elements look like after the first pass?  34,8,64,51,32,21',
       answersOptions: [
         { answerText: '8,21,32,34,51,64', isCorrect: false },
         { answerText: '8,32,34,51,64,21', isCorrect: false },
@@ -52,6 +52,72 @@ function PostTest() {
         { answerText: '8,34,64,51,32,21', isCorrect: true },
       ],
     },
+
+    // Questions selected by Amites starts from here 
+    {
+      questionText: 'For the best case input, the running time of an insertion sort algorithm is?',
+      answersOptions: [
+        { answerText: 'Linear', isCorrect: true },
+        { answerText: 'Binary', isCorrect: false },
+        { answerText: 'Quadratic', isCorrect: false },
+        { answerText: 'Depends on the input', isCorrect: false },
+      ],
+    },
+    // {
+    //   questionText: 'Consider the array A[]= {6,4,8,1,3} apply the insertion sort to sort the array . Consider the cost associated with each sort is 25 rupees , what is the total cost of the insertion sort when element 1 reaches the first position of the array  ?',
+    //   answersOptions: [
+    //     { answerText: '50', isCorrect: true },
+    //     { answerText: '25', isCorrect: false },
+    //     { answerText: '75', isCorrect: false },
+    //     { answerText: '100', isCorrect: false },
+    //   ],
+    // },
+    // {
+    //   questionText: ' The worst-case time complexity of insertion sort is O(n2). What will be the worst-case time complexity of insertion sort if the correct position for inserting element is calculated using binary search?',
+    //   answersOptions: [
+    //     { answerText: 'O(nlogn)', isCorrect: false },
+    //     { answerText: 'O(n^2)', isCorrect: true },
+    //     { answerText: 'O(n)', isCorrect: false },
+    //     { answerText: 'O(logn)', isCorrect: false },
+    //   ],
+    // },
+    {
+      questionText: 'Consider an array of length 5,arr[5]={9,7,4,2,1}. What are the step of insertions done while running insertion sort on the array?',
+      answersOptions: [
+        { answerText: '74219 42197 21947 19472', isCorrect: false },
+        { answerText: '79421 47921 24791 12479', isCorrect: true },
+        { answerText: '97412 97124 91247 12479', isCorrect: false },
+        { answerText: '79421 24791 47921 12479', isCorrect: false },
+      ],
+    },
+    {
+      questionText: 'Which of the following real examples is based on insertion sort?',
+      answersOptions: [
+        { answerText: 'arranging a pack of playing cards', isCorrect: true },
+        { answerText: 'database scenarios and distributes scenarios', isCorrect: false },
+        { answerText: 'arranging books on a library shelf', isCorrect: false },
+        { answerText: 'real-time systems', isCorrect: false },
+      ],
+    },
+    {
+      questionText: 'Which of the following is correct with regard to insertion sort?',
+      answersOptions: [
+        { answerText: 'Insertion sort is stable and it sorts In-place', isCorrect: true },
+        { answerText: 'Insertion sort is stable and it does not sort In-place', isCorrect: false },
+        { answerText: 'Insertion sort is unstable and it does not sort In-place', isCorrect: false },
+        { answerText: 'Insertion sort is unstable and it sorts In-place', isCorrect: false },
+      ],
+    }
+    // {
+    //   questionText: 'A queue is implemented using an array such that ENQEUE and DEQUEUE operations are performed efficiently. Which one of the following statements is correct (n refers to the number of items in the queue)?',
+    //   answersOptions: [
+    //     { answerText: 'The worst-case time complexity for both operations will be Ω(n)', isCorrect: false },
+    //     { answerText: 'Worst-case time complexity for both operations will be Ω(log n)', isCorrect: false },
+    //     { answerText: 'At most one operationcan be performed in O(1) time but the worst case time for the other operation will be Ω(n)', isCorrect: false },
+    //     { answerText: 'Both operations can be performed in O(1) time', isCorrect: true },
+    //   ],
+    // },
+    // Ends here
   ];
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [showScore, setScore] = useState(false);
@@ -61,8 +127,11 @@ function PostTest() {
   // handle selected answer 
   const handleButtonClick = (isCorrect, ind) => {
     // console.log("id is ",ind.target.id)
+
     // enable next button after answer selection 
-    document.getElementById('nxt').disabled = false;
+    const nxtButton=document.getElementById('nxt');
+    nxtButton.disabled=false;
+    nxtButton.style.opacity=5;
 
     // disable options once one is selected 
     const btns = document.querySelectorAll('.btn');
@@ -114,7 +183,9 @@ function PostTest() {
       setScore(true);
     }
     // disable next button before answer selection 
-    document.getElementById('nxt').disabled = true;
+    const nxtButton=document.getElementById('nxt');
+    nxtButton.disabled=true;
+    nxtButton.style.opacity=0.5;
   }
 
   // function to restart the quiz 
