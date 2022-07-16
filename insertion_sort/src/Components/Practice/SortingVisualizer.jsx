@@ -4,13 +4,12 @@ import Header from "./Components/Header/Header.jsx";
 import ArrayBar from "./Components/ArrayBar/ArrayBar.jsx";
 import RangeSlider from "./Components/RangeSliders/RangeSlider.jsx";
 // .. HELPER FUNCTIONS .. //
-import { randomIntFromInterval, playAudio } from "./HelperFunctions.js";
+import { randomIntFromInterval } from "./HelperFunctions.js";
 // .. ALGORITHMS .. //
 import InsertionSort from "./SortingAlgorithms/InsertionSort/InsertionSort.js";
 // .. STYLE .. //
 import "./SortingVisualizer.css";
 // .. SOUNDS .. //
-import ResetEffect from "./sounds/ResetEffect.mp3";
 
 export default class SortingVisualizer extends Component {
   constructor(props) {
@@ -49,7 +48,6 @@ export default class SortingVisualizer extends Component {
       // ## Generates an element between 5 and 70, and pushes it into the array. ## //
       array.push(randomIntFromInterval(5, 70));
     }
-    playAudio(ResetEffect);
     this.setState({ array: array });
     let bar= document.getElementsByClassName('color-bar');
     let barBottom= document.getElementsByClassName('bottom');

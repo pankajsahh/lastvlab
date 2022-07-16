@@ -1,4 +1,3 @@
-import CompletedEffect from "./sounds/CompletedEffect.mp3";
 
 const right_color_bar = document.getElementsByClassName("right-color-bar");
 const left_color_bar = document.getElementsByClassName("left-color-bar");
@@ -80,14 +79,3 @@ export function disableButtons() {
   document.getElementById("range-slider").style.visibility = "hidden";
 }
 
-// ## Plays audio ## //
-export function playAudio(myAudio) {
-  const audio = new Audio(myAudio);
-  audio.preload = "auto";
-  const playing = audio.play();
-  playing.then(() => {}).catch(() => {});
-}
-
-export function playCompletedSoundEffect() {
-  playAudio(CompletedEffect);
-}

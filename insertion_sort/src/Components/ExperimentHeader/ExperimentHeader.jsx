@@ -5,8 +5,8 @@ const ExperimentHeader=(props)=>{
     return (
         
             <div className=' bg-white'>
-            <div className='flex justify-between py-3 px-14 mx-3'><img className='h-12 w-24' src={vlab} alt="Can't load."></img>
-             <img className='h-12' src={college} alt="Can't load."></img>
+            <div className='flex justify-between py-3 px-14 mx-3'><img className='h-16 w-24' src={vlab} alt="Can't load."></img>
+             <img className='h-16' src={college} alt="Can't load."></img>
             </div>
             <div>
                 <ul className='check flex justify-center space-x-12 font-bold items-center'>

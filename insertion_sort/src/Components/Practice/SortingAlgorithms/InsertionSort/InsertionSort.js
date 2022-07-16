@@ -5,8 +5,7 @@ import {
   swapBars,
   resetBarStyleDefault,
   disableButtons,
-  enableButtons,
-  playCompletedSoundEffect,
+  enableButtons
 } from "../../HelperFunctions.js";
 
 const InsertionSort = (array, animationSpeed) => {
@@ -62,7 +61,6 @@ const InsertionSort = (array, animationSpeed) => {
     });
 
     Promise.all([promise1, promise2])
-      .then(playCompletedSoundEffect)
       // Enabling the buttons when both the promises have been resolved.
       .then(enableButtons);
   }

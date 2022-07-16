@@ -14,7 +14,7 @@ import {
 } from "react-router-dom";
 import ExperimentHeader from '../ExperimentHeader/ExperimentHeader';
 import ExperimentPage from '../Experiment/ExperimentPage';
-import Practice from "../SortingVisualizer/SortingVisualizer.jsx";
+import Practice from "../Practice/SortingVisualizer.jsx";
 // import Practice1 from './Practice1';
 
 import TargetAudience from '../TargetAudience/TargetAudience';
