@@ -43,19 +43,12 @@
   transition: 0.3s;
 }
 
-.buttonStyle1:hover {
-  border-color: green;
-  color: green;
-}
 
-.buttonStyle2:hover {
-  border-color: peru;
-  color: peru;
-}
+
+
 
 #reset {
   opacity: 0.6;
-  background-color: orangered;
   padding: 8px;
 }
 #reset:hover {

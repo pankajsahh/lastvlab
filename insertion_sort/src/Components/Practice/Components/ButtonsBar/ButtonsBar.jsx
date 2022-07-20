@@ -8,13 +8,13 @@ export default class ButtonsBar extends Component {
     return (
 
       <div className="buttons-bar">
-        <button className="button" onClick={() => this.props.generateNewArray()} id="reset">
+        <button className="button bg-gradient-to-r from-sky-500 to-indigo-500" onClick={() => this.props.generateNewArray()} id="reset">
           Generate New Array
         </button>
         <button
           id="insertionSortButton"
           onClick={() => this.props.insertionSort()}
-          className="buttonStyle1 button"
+          className="buttonStyle1 button bg-gradient-to-r from-sky-500 to-indigo-500"
         >
           Sort Array
         </button>

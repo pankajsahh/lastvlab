@@ -51,6 +51,8 @@ const Simulation=()=>{
             if(i!=id){
         const J= document.getElementById(i);
         J.style.backgroundColor='Green';
+        J.style.color='white';
+
             }else {
         const J= document.getElementById(id);
         J.style.backgroundColor='Blue';
@@ -66,6 +68,7 @@ const Simulation=()=>{
         }
         for(let j=0;j<boxes.length;j++){
             boxes[j].style.backgroundColor="Green";
+             boxes[j].style.color='white';
         }
         
     }
@@ -134,44 +137,46 @@ const Simulation=()=>{
         // disable size input box
         arraySizeButton();
         console.log("Array before sorting ",array)
-        for(let i=1;i<val;i++){
+        for(let i=1;i<val;i++){  //Line 101
             setIth(i);
-            await new Promise(resolve=>changeLineColour(resolve,'101',2000));
-            let key=array.at(i);
+            await new Promise(resolve=>changeLineColour(resolve,'101',4000));
+            let key=array.at(i);         //Line 102
             setKey(key);
             changeKeyBoxColor(i);
-            await new Promise(resolve=>changeLineColour(resolve,'102',2000));
+            await new Promise(resolve=>changeLineColour(resolve,'102',4000));
             // console.log(key)
-            let j=i-1;
+            let j=i-1;          //Line 103
             setJth(j);
             changeJcolor(j);
-            await new Promise(resolve=>changeLineColour(resolve,'103',2000));
+            await new Promise(resolve=>changeLineColour(resolve,'103',4000));
             let flag=false; //track if while loop is executed
-            while(j>=0 && array.at(j)>key)
+            while(j>=0 && array.at(j)>key)     //Line 104
             {
                 flag=true; //track if while loop is executed 
                 setStatement(`${array[j]} is greater than key (${key}). Now shfiting needs to occur to place key ${key} at its correct position.`)
-                await new Promise(resolve=>changeLineColour(resolve,'104',5000));
+                await new Promise(resolve=>changeLineColour(resolve,'104',6000));
                 setStatement('');
 
-                array[j+1]=array.at(j);
+                array[j+1]=array.at(j);    //Line 105
+
                 setStatement(`array[j] ${array[j]} is shifted to one index right to create space for key ${key}`)
-                await new Promise(resolve=>changeLineColour(resolve,'105',4000));
-                
                 updateBoxes(array.map((item,index)=>{
                     console.log("Array index ",index)
-                    return(<div className='inline border-2 border-slate-500 p-4 text-center self-center shadow-md z-10 rounded' key={index} id={index}>{item} </div>)
+                    return(<div className='inline border-2 border-slate-500 p-4 text-center self-center shadow-md z-10 rounded transition ease-in-out duration-700' key={index} id={index}>{item} </div>)
                     
                 })
                 )
                 
+                await new Promise(resolve=>changeLineColour(resolve,'105',5000));
+                
+               
                 
                 setStatement('');
 
-                j--;
+                j--;        //Line 106 
                 setJth(j)
                 changeJcolor(j);
-                await new Promise(resolve=>changeLineColour(resolve,'106',2000));
+                await new Promise(resolve=>changeLineColour(resolve,'106',4000));
                flag=false;
             }if(!flag){
                 if(j<0){
@@ -185,24 +190,25 @@ const Simulation=()=>{
                 
             }
             setStatement('')
-            array[j+1]=key;
+            array[j+1]=key;     //Line 107 
 
             updateBoxes(array.map((item,index)=>{
                 console.log("Array index ",index)
-                return(<div className='inline border-2 border-slate-500 p-4 text-center self-center shadow-md z-10 rounded' key={index} id={index}>{item} </div>)
+                return(<div className='inline border-2 border-slate-500 p-4 text-center self-center shadow-md z-10 rounded transition ease-in-out duration-700' key={index} id={index}>{item} </div>)
                 
             })
 
             )
-            await new Promise(resolve=>changeLineColour(resolve,'107',1000));
             setStatement(`Key ${key} is placed to its correct position j+1 i.e. ${j+1} `)
-            await new Promise(resolve=>setTimeout(resolve,5000))
+            
+            await new Promise(resolve=>changeLineColour(resolve,'107',5000));
+            
             setStatement('');
             changeTillSorted(i);
         }
         setIth(array.length)
         setStatement(`i= ${array.length},which is equal to array size. For loop condition fails.`)
-        await new Promise(resolve=>changeLineColour(resolve,'101',3000));
+        await new Promise(resolve=>changeLineColour(resolve,'101',4000));
 
         document.getElementById('107').style.color=null;
         document.getElementById('keyBox').style.backgroundColor=null;
@@ -246,9 +252,9 @@ const Simulation=()=>{
         setStatement('');
         for(let i=0;i<array.length;i++){
             document.getElementById(i).style.backgroundColor=null;
+            document.getElementById(i).style.color=null;
+
         }
-        
-        
     }
     
     const generateElements =()=>{
@@ -266,7 +272,7 @@ const Simulation=()=>{
         console.log("Array elements",array.at(0))
         updateBoxes(array.map((item,index)=>{
             console.log("Array index ",index)
-            return(<div className='inline border-2 border-slate-500 p-4 text-center self-centern reset shadow-md z-10 rounded' key={index} id={index}>{item} </div>)
+            return(<div className='inline border-2 border-slate-500 p-4 text-center self-centern reset shadow-md z-10 rounded transition ease-in-out duration-700' key={index} id={index}>{item} </div>)
             
         })
         )
@@ -283,7 +289,10 @@ const Simulation=()=>{
     }
 
     const generateManualArray=()=>{
-       resetStyles();
+    
+     if(document.getElementById(0)!=null){
+      resetStyles();
+     }
        const text=manual.split(' ');
     //    console.log(text.length)
        if(text.length!=val){
@@ -295,7 +304,7 @@ const Simulation=()=>{
     
         updateBoxes(array.map((item,index)=>{
             console.log("Array index ",index)
-            return(<div className='inline border-2 border-slate-500 p-4 text-center self-centern reset shadow-md z-10 rounded' key={index} id={index}>{item} </div>)           
+            return(<div className='inline border-2 border-slate-500 p-4 text-center self-centern reset shadow-md z-10 rounded transition ease-in-out duration-700' key={index} id={index}>{item} </div>)           
         })
         )
         if(boxes){
@@ -315,26 +324,26 @@ const Simulation=()=>{
 
             {/* Input box */}
             <div className="border-slate-300 border-4 h-96 p-5 w-1/3 relative">
-                <h2 className="text-center text-2xl font-bold  text-black rounded shadow-md z-10  m-auto mb-5">Input</h2>
+                <h2 className="text-center text-2xl font-bold  text-black rounded shadow-md z-10  m-auto mb-5  w-max">Input</h2>
                 
                 <label htmlFor="size" className=" font-semibold tracking-wide text-xl">Array size:- </label>
                 <input type="number" name="size" className="mb-12 border-2 border-slate-300 hover:bg-blue-500 hover:text-white rounded z-10 shadow-md font-semibold" id='size' value={val} onChange={handleChange} placeholder='Enter array size'></input>
                 {errors.size?<div className="text-red-500 m-0 absolute top-24 left-32">{errors.size}</div>:null}
                 <br></br>
                 
-                <button className="p-2 bg-blue-600 text-white m-2 rounded btns absolute left-0 shadow-md z-10"  onClick={generateElements} >Random elements.</button>
+                <button className="p-2 bg-gradient-to-r from-sky-500 to-indigo-500 text-white m-2 rounded btns absolute left-0 shadow-md z-10"  onClick={generateElements} >Random elements.</button>
                 
-                <button className="p-2 bg-blue-600 text-white m-2 rounded btns absolute right-0 space-x-1 shadow-md z-10" onClick={generateInput}>Enter elements manually</button>
-                <button className="p-2 bg-blue-600 text-white m-2 rounded btns absolute bottom-0 right-0 shadow-md z-10" onClick={algorithm}>Start.</button><br/>
+                <button className="p-2 bg-gradient-to-r from-sky-500 to-indigo-500 text-white m-2 rounded btns absolute right-0 space-x-1 shadow-md z-10" onClick={generateInput}>Enter elements manually</button>
+                <button className="p-2 bg-gradient-to-r from-sky-500 to-indigo-500 text-white m-2 rounded btns absolute bottom-0 right-0 shadow-md z-10" onClick={algorithm}>Start.</button><br/>
                {flag?<div className="w-full absolute top-48 left-auto"><input type='text' placeholder="White space between elements" className="rounded border-2 border-black w-64 shadow-md z-10" id='manual' value={manual} onChange={handleManual}></input>
-               <div className="inline-block group"><button type="submit" className="p-2 bg-blue-600 text-white m-2 rounded shadow-md z-10 " id='submit' onClick={generateManualArray}>Submit</button><p className='absolute top-2 left-auto -right-1  bg-white text-black p-0 z-10 group-hover:visible invisible text-sm'>Double Click</p></div>
+               <div className="inline-block group"><button type="submit" className="p-2 bg-gradient-to-r from-sky-500 to-indigo-500 text-white m-2 rounded shadow-md z-10 " id='submit' onClick={generateManualArray}>Submit</button><p className='absolute top-2 left-auto -right-1  bg-white text-black p-0 z-10 group-hover:visible invisible text-sm'>Double Click</p></div>
                {errors.element?<div className="text-red-500 m-0 absolute top-9">{errors.element}</div>:null}</div>:null}
             </div>
 
                 {/* Code Box */}
                 
             <div className="border-slate-300 border-4 h-96 p-5 w-1/3">
-                <h2 className="text-center font-bold text-2xl   text-black rounded shadow-md z-10  m-auto mb-5">Code</h2>
+                <h2 className="text-center font-bold text-2xl   text-black rounded shadow-md z-10  m-auto mb-5 w-max">Code</h2>
                 <div className="font-bold -tracking-wider text-xl ">
                <p id='101'>for(i=1;i&lt;{array.length};i++)</p>
                <p id='102' className="pl-5 mt-2">key = array[i]</p>
@@ -349,7 +358,7 @@ const Simulation=()=>{
 
             {/* Output Box  */}
             <div className="border-slate-300 border-4 h-96 p-5 w-2/3 text-center">
-                <h2 className="text-center font-bold text-2xl  text-black rounded shadow-md z-10  m-auto mb-5">Output</h2>
+                <h2 className="text-center font-bold text-2xl  text-black rounded shadow-md z-10  m-auto mb-5 w-max">Output</h2>
                 <div className="mt-5">{boxes}</div>
                 {boxes ?
                 <div className="mt-4">

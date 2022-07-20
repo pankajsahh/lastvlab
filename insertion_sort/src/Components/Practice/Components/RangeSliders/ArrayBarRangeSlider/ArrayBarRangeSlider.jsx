@@ -39,7 +39,7 @@ export default class ArrayBarRangeSlider extends Component {
   }
   render() {
     return (
-      <div className="range-slider-container">
+      <div className="range-slider-container bg-gradient-to-r from-sky-500 to-indigo-500">
         <p id="text-array-size">Array Size</p>
         <ArrayBarSlider
           id="arrayBarSlider"

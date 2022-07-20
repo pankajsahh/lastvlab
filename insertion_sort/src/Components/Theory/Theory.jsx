@@ -6,10 +6,10 @@ import theory1 from './Theory1.png'
 const Theory = () => {
   return (
     <>
-    <ExperimentHeader th='text-blue-500 underline'/>
+    <ExperimentHeader th='text-white underline'/>
     <div className='flex justify-around pb-5 '>
         <div className='m-10 p-5'>
-        <h3 className='font-semibold text-center p-7 text-3xl tracking-wider text-slate-500'>Theory</h3>
+        <h3 className='font-rubik text-center p-7 text-3xl tracking-wider text-slate-500'>Theory</h3>
         <small className='font-thin text-lg'>Insertion sort is a simple sorting algorithm 
         that works similar to the way you sort playing cards in your hands. The array is 
         virtually split into a sorted and an unsorted part. Values from the unsorted part 

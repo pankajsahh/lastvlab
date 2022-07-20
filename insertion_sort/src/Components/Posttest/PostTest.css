@@ -6,10 +6,12 @@
     padding: 20px; 
     padding-top: 10px;
     justify-content: space-around;
+   
   }
 .appTest{
   /* background-color: #252d4a; */
-  background: rgb(59,130,246);
+  /* background: rgb(59,130,246); */
+ 
   width: 650px;
   color: aliceblue;
   /* min-height: 200px; */
@@ -28,12 +30,14 @@
     padding: 20px;
     margin: 20px;
     width: 650px;
+   
   }
   
   /* QUESTION/TIMER/LEFT SECTION */
   .question-section {
     width: 70%;
     position: relative;
+    
   }
   
   #question-count {

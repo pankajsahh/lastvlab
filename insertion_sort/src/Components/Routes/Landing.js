@@ -35,35 +35,35 @@ const Landing =()=>{
         
         <Router>      
             <Routes>
-            <Route path='/' element={<><Header stl="text-blue-500 underline" /><LandingContent/><Footer/></>}/>
-            <Route path='/Introduction' element={<><Header in="text-blue-500 underline"/><Introduction/><Footer/></>}/>
+            <Route path='/' element={<><Header stl="text-white underline" /><LandingContent/><Footer/></>}/>
+            <Route path='/Introduction' element={<><Header in="text-white underline"/><Introduction/><Footer/></>}/>
 
-            <Route path='/Objective' element={<><Header ob="text-blue-500 underline"/><Objective/><Footer/></>}/>
+            <Route path='/Objective' element={<><Header ob="text-white underline"/><Objective/><Footer/></>}/>
             
-            <Route path='/Feedback' element={<><Header fb="text-blue-500 underline"/><Feedback/><Footer/></>}/>
+            <Route path='/Feedback' element={<><Header fb="text-white underline"/><Feedback/><Footer/></>}/>
 
-            <Route path='/Feedback/FeedbackForm' element={<><Header fb="text-blue-500 underline"/><Feedback/><Footer/><FeedbackForm/></>}/>
+            <Route path='/Feedback/FeedbackForm' element={<><Header fb="text-white underline"/><Feedback/><Footer/><FeedbackForm/></>}/>
 
-            <Route path='/Target_Audience' element={<><Header tr="text-blue-500 underline"/><TargetAudience/><Footer/></>}/>
+            <Route path='/Target_Audience' element={<><Header tr="text-white underline"/><TargetAudience/><Footer/></>}/>
 
-            <Route path='/Experiment' element={<><Header tl="text-blue-500 underline"/><Experiment/><Footer/></>}/>
+            <Route path='/Experiment' element={<><Header tl="text-white underline"/><Experiment/><Footer/></>}/>
 
             <Route path='/Experiment/InsertionSort' element={<><ExperimentPage/><Footer/></>}/> 
 
             <Route path='/Experiment/InsertionSort/Aim' element={<><ExperimentPage/><Footer/></>}/>
 
-            <Route path='/Experiment/InsertionSort/References' element={<><ExperimentHeader rf="text-blue-500 underline"/><References/><Footer/></>}/>
+            <Route path='/Experiment/InsertionSort/References' element={<><ExperimentHeader rf="text-white underline"/><References/><Footer/></>}/>
 
-            <Route path='/Experiment/InsertionSort/Practice' element={<><ExperimentHeader pr='text-blue-500 underline'/><Practice/></>}/>
+            <Route path='/Experiment/InsertionSort/Practice' element={<><ExperimentHeader pr='text-white underline'/><Practice/></>}/>
 
             <Route path='/Experiment/InsertionSort/Aim' element={<><ExperimentPage/><Footer/></>}/>
             <Route path='/Experiment/InsertionSort/References' element={<><ExperimentHeader rf="text-red-500 underline"/><References/><Footer/></>}/>
             <Route path='/Experiment/InsertionSort/Theory' element={<><Theory/></>}/>
             <Route path='/Experiment/InsertionSort/Practice' element={<><ExperimentHeader pr='text-red-500 underline'/><Practice/></>}/>
 
-            <Route path='/Experiment/InsertionSort/Simulation' element={<><ExperimentHeader sml="text-blue-500 underline"/><Simulation/><Footer/></>}/>
+            <Route path='/Experiment/InsertionSort/Simulation' element={<><ExperimentHeader sml="text-white underline"/><Simulation/><Footer/></>}/>
 
-            <Route path='/Experiment/InsertionSort/Posttest' element={<><ExperimentHeader pst='text-blue-500 underline'></ExperimentHeader><PostTest ></PostTest><Footer/></>}/>
+            <Route path='/Experiment/InsertionSort/Posttest' element={<><ExperimentHeader pst='text-white underline'></ExperimentHeader><PostTest ></PostTest><Footer/></>}/>
              
             </Routes>
       </Router>

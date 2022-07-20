@@ -3,6 +3,9 @@ import './PostTest.css';
 import crown from './crown.png'
 import quiz from './quiz.png'
 function PostTest() {
+
+  // Question number to display in quiz box randomly 
+  const[questionIndex,setQuestionIndex]=useState(0);
   let ch = <>
     <ul className="list-decimal list-inside">
       <li className="font-bold text-left text-lg">This quiz consists of seven questions.</li>
@@ -143,20 +146,21 @@ function PostTest() {
     } else document.getElementById(ind.target.id).style.backgroundColor = "Red";
 
     // mark the correct option on selection of wrong answer 
-    question[currentQuestion].answersOptions.filter((value, index) => {
+    question[questionIndex].answersOptions.filter((value, index) => {
       if (value.isCorrect) {
         document.getElementById(index).style.backgroundColor = "Green"
       }
     })
 
     if (currentQuestion == 0) {
-      nextQue();
+      nextQue(); //In case of start quiz ,auto move to next 
     }
 
   }
   // move to next question 
-  const nextQue = () => {
-    // enable the option selection 
+  const nextQue = async() => {
+   
+        // enable the option selection 
     const btns = document.querySelectorAll('.btn');
     btns.forEach(btn => btn.disabled = false)
 
@@ -176,7 +180,7 @@ function PostTest() {
 
     const nextQuestion = currentQuestion + 1;
     if (nextQuestion < question.length) {
-
+         generateQuestion();
       setCurrentQuestion(nextQuestion);
 
     } else {
@@ -194,10 +198,33 @@ function PostTest() {
     setCurrentQuestion(0);
     setfinalScore(0);
     setVisiblity('invisible');
+    setQuestionIndex(0);
+    setQuestionArray([]);
+  }
+
+  // Generate random question index
+  // Array that keeps the generated question index to make sure no index is generated twice
+  const [questionArray,setQuestionArray] =useState([]);
+  // helper function that 
+  const generateQuestion =async()=>{
+    
+    const length=question.length-1;
+    const ind=Math.floor((Math.random()*length)+1);
+    console.log("Generated index is",questionArray);
+    console.log("Current generated index is",ind)
+    if(questionArray.includes(ind)){
+    console.log("hello I am again here.")
+      return generateQuestion();
+    }else{console.log("New entry found.")
+    questionArray.push(ind);
+    setQuestionArray(questionArray)
+    console.log("Generated question index is ",questionArray)
+   
+     setQuestionIndex(ind);}
   }
   return (
     <div className="main">
-      <div className='appTest'>
+      <div className='appTest bg-gradient-to-r from-sky-500 to-indigo-500'>
         {showScore ? (
           <>
             <div className='score-Section'>
@@ -219,12 +246,14 @@ function PostTest() {
               <div className={visiblity} id="question-count">
                 <span >Question{currentQuestion}</span>/{question.length - 1}
               </div>
-              <div className='question-text'>{question[currentQuestion].questionText}</div>
+
+              <div className='question-text'>{question[questionIndex].questionText}</div>
             </div>
 
             <div className='answer-section'>
-              {question[currentQuestion].answersOptions.map((answersOption, index) => (
-                <button className="btn" id={index} onClick={(event) => handleButtonClick(answersOption.isCorrect, event)}>{answersOption.answerText}</button>))}
+              {question[questionIndex].answersOptions.map((answersOption, index) => (
+
+                <button className="btn" key={index} id={index} onClick={(event) => handleButtonClick(answersOption.isCorrect, event)}>{answersOption.answerText}</button>))}
               <button className={visiblity} id="nxt" onClick={nextQue}>Next</button>
             </div>
 
