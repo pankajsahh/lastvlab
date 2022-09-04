@@ -14,7 +14,9 @@ const CodeEditor = ({ value, onCodeChange, programmingLanguage }) => {
     console.log("code editor loaded");
   };
   return (
-    <AceEditor
+    <>
+    
+     <AceEditor
       className="codeEditor"
       placeholder="Code goes here"
       mode={programmingLanguage}
@@ -35,6 +37,8 @@ const CodeEditor = ({ value, onCodeChange, programmingLanguage }) => {
         tabSize: 2,
       }}
     />
+    </>
+   
   );
 };
 

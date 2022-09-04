@@ -169,3 +169,39 @@ pre code {
   display: block;
   padding: 8px 10px;
 }
+
+.llink{
+  color: rgb(114, 114, 240);
+  margin: 50px;
+  border-radius: 3px;
+  box-shadow: -6px 4px 15px 6px #90a2b4;
+}
+.codeeditor{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.codeEditor{
+  width: 100% !important;
+}
+.optionSegment{
+  width: 80% !important;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.inputEditor{
+  width: 30rem !important;
+  min-height: 10rem ;
+}
+.outputLogs{
+  width: 30rem !important;
+  min-height: 10rem ;
+
+}
+.coding_section{
+  width: 80%;
+}
