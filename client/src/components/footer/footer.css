@@ -1,0 +1,10 @@
+.vivColor{
+    background:var(--color-bg)!important;
+}
+
+.vivTextColor{
+    /* background: linear-gradient(89.97deg, #AE67FA 1.84%, #F49867 102.67%) ;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text; */
+    color: #fff;
+}

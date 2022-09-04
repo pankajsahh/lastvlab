@@ -1,0 +1,7 @@
+.aimbody{
+    display: flex;
+    justify-content: space-evenly;
+}
+.statImgs img{
+    width: 60%;
+}

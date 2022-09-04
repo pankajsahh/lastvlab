@@ -1,0 +1,53 @@
+
+  .center {
+      border-radius: 23px;
+    background: rgb(252, 252, 252);
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+  }
+  
+  .btn {
+      border-radius: 23px;
+    font-weight: bolder;
+    cursor: pointer;
+    background: transparent;
+    border: 1px solid #002751;
+    outline: none;
+    transition: 1s ease-in-out;
+  }
+  
+  svg {
+      border-radius: 23px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    fill: none;
+    stroke: #fff;
+    stroke-dasharray: 150 480;
+    stroke-dashoffset: 150;
+    transition: 1s ease-in-out;
+  }
+  
+  .btn:hover {
+    transition: 1s ease-in-out;
+    background: #002751;
+    /* border-radius: 23px; */
+  }
+  
+  .btn:hover svg {
+    stroke-dashoffset: -480;
+  }
+  
+  .btn span {
+        color: #021d3b;
+    font-size: 16px;
+    font-weight: 100;
+  }
+  .btn:hover span {
+      color: white;
+  }
+
+.Nav-Buttons{
+  padding: 0;
+}
