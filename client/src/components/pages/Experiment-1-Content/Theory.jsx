@@ -70,6 +70,16 @@ const Theory = () => {
 St','Hindi','Eng']].var()
                 </p >
             </div>
+
+            <div className="standard_deviation child">
+            <h4> Standard Deviation</h4>
+            <p className="child">DataFrame.std() returns the standard deviation of the 
+values. Standard deviation is calculated as the square 
+root of the variance. <br />
+     df[['Maths','Science','S.
+St','Hindi','Eng']].std()</p>
+            </div>
+
         </div>
     )
 }
