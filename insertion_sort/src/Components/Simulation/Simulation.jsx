@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 const Simulation=()=>{
 
     const [array,setArray]=useState([]);
@@ -338,6 +339,7 @@ const Simulation=()=>{
                {flag?<div className="w-full absolute top-48 left-auto"><input type='text' placeholder="White space between elements" className="rounded border-2 border-black w-64 shadow-md z-10" id='manual' value={manual} onChange={handleManual}></input>
                <div className="inline-block group"><button type="submit" className="p-2 bg-gradient-to-r from-sky-500 to-indigo-500 text-white m-2 rounded shadow-md z-10 " id='submit' onClick={generateManualArray}>Submit</button><p className='absolute top-2 left-auto -right-1  bg-white text-black p-0 z-10 group-hover:visible invisible text-sm'>Double Click</p></div>
                {errors.element?<div className="text-red-500 m-0 absolute top-9">{errors.element}</div>:null}</div>:null}
+               <Link to='/Experiment/InsertionSort/Simulation/Test'><button className="p-2 bg-gradient-to-r from-sky-500 to-indigo-500 text-white m-2 rounded absolute left-0 bottom-0 shadow-md z-10">Try Yourself</button></Link>
             </div>
 
                 {/* Code Box */}
@@ -367,7 +369,7 @@ const Simulation=()=>{
                 <div className="font-bold text-xl border-2 border-black mt-4 inline-block p-2" >J={jth}</div>
 
                 <div className="font-bold text-xl border-2 border-black mt-4 inline-block p-2" id="keyBox">Key={key}</div>
-                <div className="mt-10"><p className="text-red-500 text-lg font-semibold">{statement}</p></div></div>:<h2>Please enter array size and click generateElements.</h2>}
+                <div className="mt-10"><p className="text-red-500 text-lg font-semibold">{statement}</p></div></div>:<h2 className="font-bold text-xl tracking-wide">Please enter array size and click generateElements.</h2>}
             </div>
         </div>
     );

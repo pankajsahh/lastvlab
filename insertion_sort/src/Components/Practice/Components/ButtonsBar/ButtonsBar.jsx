@@ -14,7 +14,7 @@ export default class ButtonsBar extends Component {
         <button
           id="insertionSortButton"
           onClick={() => this.props.insertionSort()}
-          className="buttonStyle1 button bg-gradient-to-r from-sky-500 to-indigo-500"
+          className="buttonStyle1 button bg-gradient-to-r from-sky-500 to-indigo-500 w-36"
         >
           Sort Array
         </button>

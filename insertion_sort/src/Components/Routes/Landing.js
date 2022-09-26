@@ -28,6 +28,7 @@ import FeedbackForm from '../Feedback/FeedbackForm';
 import References from '../References/References';
 import Theory from '../Theory/Theory';
 import PostTest from '../Posttest/PostTest';
+import UserTest from '../Simulation/UserTest';
 
 
 const Landing =()=>{
@@ -58,10 +59,13 @@ const Landing =()=>{
 
             <Route path='/Experiment/InsertionSort/Aim' element={<><ExperimentPage/><Footer/></>}/>
             <Route path='/Experiment/InsertionSort/References' element={<><ExperimentHeader rf="text-red-500 underline"/><References/><Footer/></>}/>
+
             <Route path='/Experiment/InsertionSort/Theory' element={<><Theory/></>}/>
             <Route path='/Experiment/InsertionSort/Practice' element={<><ExperimentHeader pr='text-red-500 underline'/><Practice/></>}/>
 
             <Route path='/Experiment/InsertionSort/Simulation' element={<><ExperimentHeader sml="text-white underline"/><Simulation/><Footer/></>}/>
+
+            <Route path='/Experiment/InsertionSort/Simulation/Test' element={<><ExperimentHeader sml="text-white underline"/><UserTest/><Footer/></>}/>
 
             <Route path='/Experiment/InsertionSort/Posttest' element={<><ExperimentHeader pst='text-white underline'></ExperimentHeader><PostTest ></PostTest><Footer/></>}/>
              
