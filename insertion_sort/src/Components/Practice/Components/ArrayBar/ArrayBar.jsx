@@ -6,8 +6,8 @@ import "./ArrayBar.css";
 export default class BarContainer extends Component {
   render() {
     return (
-      <div className="bar-container">
-        <div><ul className='list-disc px-5'>
+      <div className="bar-container ">
+        <div className="shadow-2xl px-10 py-5 rounded-3xl mr-7 bg-gradient-to-r from-indigo-100 to-sky-200"><ul className='list-disc px-5'>
 					<li><b className='mb-1' >Unsorted numbers are coloured <span className='text-cyan-500'>AQUA.</span></b></li><br/>
             <li><b className='mb-1' >Two swapping indexes will be coloured <span className='text-yellow-500'>YELLOW.</span></b></li><br/>
            <li><b className='mb-1' >Two comparing indexes will be coloured <span className='text-blue-500'>BLUE.</span></b></li> <br/>

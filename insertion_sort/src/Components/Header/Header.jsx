@@ -41,7 +41,7 @@ const Header=(props)=>{
     }
     return (
         
-<div className='bg-gradient-to-r from-sky-500 to-indigo-500'>
+<div className='bg-gradient-to-r from-sky-300 to-indigo-200'>
         <div className='sticky sm:flex sm:justify-between sm:py-3 sm:px-14 sm:mx-3 flex justify-between p-2 '><a href='https://vlab.co.in/' target="_blank"><img className='h-14 w-24 ' alt="Can't load." src={vlab}></img></a>
              <a href='https://www.andcollege.du.ac.in/' target='_blank'><img className='h-16' alt="Can't load." src={college}></img></a>
             </div>
@@ -49,10 +49,15 @@ const Header=(props)=>{
                 <span  className='text-3xl cursor-pointer sm:hidden block'><ion-icon id="menu" name="menu-outline" onClick={menuSelect}></ion-icon></span>
                 <ul className=' check sm:flex sm:justify-center sm:space-x-5 sm:font-bold sm:items-center font-semibold hidden '>
                 <Link  to='/'><li className={props.stl}>Home</li></Link>
+
                 <Link to='/Introduction'>   <li className={props.in}>Introduction</li></Link>
+
                 <Link to='/Experiment'>  <li className={props.tl}>Experiments</li></Link>
+
                 <Link to='/Objective'> <li className={props.ob}>Objective</li></Link>
+
                 <Link to='/Target_Audience'> <li className={props.tr}>Target Audience</li></Link>
+                
                 <Link to='/Feedback'><li className={props.fb}>Feedback</li></Link>
                 </ul>
                 <hr></hr>

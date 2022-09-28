@@ -7,7 +7,7 @@ function PostTest() {
   // Question number to display in quiz box randomly 
   const[questionIndex,setQuestionIndex]=useState(0);
   let ch = <>
-    <ul className="list-decimal list-inside">
+    <ul className="list-decimal list-inside text-black">
       <li className="font-bold text-left text-lg">This quiz consists of seven questions.</li>
       <li className="font-bold text-left text-lg">Four options will be given to each question.</li>
       <li className="font-bold text-left text-lg">You cannot change your answer once it is selected.</li>
@@ -142,8 +142,8 @@ function PostTest() {
 
     if (isCorrect === true) {
       setfinalScore(score + 1);
-      document.getElementById(ind.target.id).style.backgroundColor = "Green";
-    } else document.getElementById(ind.target.id).style.backgroundColor = "Red";
+      document.getElementById(ind.target.id).style.backgroundColor = "rgba(0,255,0,0.5)";
+    } else document.getElementById(ind.target.id).style.backgroundColor = "rgba(255,0,0,0.7)";
 
     // mark the correct option on selection of wrong answer 
     question[questionIndex].answersOptions.filter((value, index) => {
@@ -224,7 +224,7 @@ function PostTest() {
   }
   return (
     <div className="main">
-      <div className='appTest bg-gradient-to-r from-sky-500 to-indigo-500'>
+      <div className='appTest bg-gradient-to-r from-indigo-400 to-sky-300'>
         {showScore ? (
           <>
             <div className='score-Section'>
@@ -234,7 +234,7 @@ function PostTest() {
 
             </div>
             <div className="float-right ml-12">
-              <button className="w-max h-max text-white bg-blue-900 rounded-2xl border-4 p-2 border-blue-500 hover:opacity-50 px-2 shadow-emerald-500" onClick={restart}>Try Again</button>
+              <button className="w-max h-max text-white bg-blue-900 rounded-2xl border-4 p-2  hover:opacity-50 px-2 shadow-emerald-500" onClick={restart}>Try Again</button>
             </div>
           </>
 
