@@ -1,15 +1,15 @@
-import Practice from "./Components/Practice";
-import Landing from './Components/Landing';
+import Landing from './Components/Routes/Landing';
+import Feedbackk from './Components/Feedback/Feedbackk';
+import Question from './Components/Feedback/Question';
 // import ExperimentHeader from "./Components/ExperimentHeader";
-import ExperimentPage from "./Components/ExperimentPage";
-import { Link,BrowserRouter as Router,Routes,Route } from "react-router-dom";
-import Experiment from "./Components/Experiment";
+import ExerciseState from './Context/ExerciseState';
 const App =()=>{
   return (
-    // <Practice />
-    <Landing/>
-    // <ExperimentHeader/>
-    
+
+    <ExerciseState>
+    <Landing/>  
+    </ExerciseState>
+
   );
 }
 export default App;

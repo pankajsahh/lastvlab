@@ -1,6 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* Monton font family for header in home */
+@import url('https://fonts.googleapis.com/css2?family=Monoton&family=Rubik+Moonrocks&family=Rye&display=swap');
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -8,6 +10,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
 
 code {
@@ -18,10 +22,13 @@ code {
   padding: 8px;
 }
 .check li:hover{
-  background: rgb(19, 102, 44);
+  --tw-bg-opacity: 1;
+    color: white;
   text-decoration: underline;
+   /* color:white; */
+
   
-  color:white;
+  
   /* opacity: 0.5; */
   
 }
