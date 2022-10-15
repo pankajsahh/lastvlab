@@ -7,19 +7,26 @@ const ExerciseState=(props)=>{
     const [li,setLi]=useState(0);
     const setExerciseBackground=(i)=>{
         // console.log(i)
-        if(i==5){
+        if(i===5){
             i=0
-            console.log("hello")
+           // console.log("hello")
         }
-        console.log("hiii")
-        console.log(i)
+      //  console.log("hiii")
+       // console.log(i)
         setLi(i);
-        console.log('Rannnn')
+        //console.log('Rannnn')
     }
     const nextExercise=()=>{
-        if(exerciseCount==4){
+        if(exerciseCount===4){
             exerciseCount=-1
         }
+        // if user has clicked the next exericse button 
+        if(exerciseCount===5){
+            exerciseCount=li
+        }
+        // if user clicks the next button after clicking on try again button
+       
+        console.log(exerciseCount)
         setExerciseCount(exerciseCount+1)
     }
     const prevExercise=()=>{

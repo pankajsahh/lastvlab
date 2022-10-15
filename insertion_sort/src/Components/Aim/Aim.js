@@ -1,5 +1,5 @@
 import React from 'react'
-import aim from './aim.png';
+import aim from './aim.jpg';
 
 export default function Aim() {
   return (
@@ -10,7 +10,7 @@ export default function Aim() {
         this expriment is to understand the working, implementation and different characteristics of 
         insertion sort with the help of examples and animations.</small>    
         </div>
-        <img src={aim} alt="Can't Load." className='h-80 mr-5 p-5'></img>
+        <img src={aim} alt="Can't Load." className='h-96 mr-5 p-5'></img>
     </div>
   )
 }
