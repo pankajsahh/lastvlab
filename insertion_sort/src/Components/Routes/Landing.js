@@ -19,16 +19,18 @@ import Practice from "../Practice/SortingVisualizer.jsx";
 
 import TargetAudience from '../TargetAudience/TargetAudience';
 import Simulation from '../Simulation/Simulation';
+import Procedure from '../Procedure/Procedure';
 
 import Introduction from '../Introduction/Introduction';
 import Objective from '../Objective/Objective';
 import Feedback from '../Feedback/Feedback';
-import FeedbackForm from '../Feedback/FeedbackForm';
+import Question from '../Feedback/Question';
 
 import References from '../References/References';
 import Theory from '../Theory/Theory';
 import PostTest from '../Posttest/PostTest';
 import UserTest from '../Simulation/UserTest';
+import Thankyou from '../Feedback/Thankyou';
 
 
 const Landing =()=>{
@@ -43,7 +45,9 @@ const Landing =()=>{
             
             <Route path='/Feedback' element={<><Header fb="text-white underline"/><Feedback/><Footer/></>}/>
 
-            <Route path='/Feedback/FeedbackForm' element={<><Header fb="text-white underline"/><Feedback/><Footer/><FeedbackForm/></>}/>
+            <Route path='/Feedback/Question' element={<Question/>}/>
+
+            <Route path='/Thankyou' element={<><Header fb="text-white underline"/><Thankyou/></>}/>
 
             <Route path='/Target_Audience' element={<><Header tr="text-white underline"/><TargetAudience/><Footer/></>}/>
 
@@ -62,6 +66,8 @@ const Landing =()=>{
 
             <Route path='/Experiment/InsertionSort/Theory' element={<><Theory/></>}/>
             <Route path='/Experiment/InsertionSort/Practice' element={<><ExperimentHeader pr='text-red-500 underline'/><Practice/></>}/>
+
+            <Route path='/Experiment/InsertionSort/Procedure' element={<><ExperimentHeader pc="text-white underline"/><Procedure/></>}/>
 
             <Route path='/Experiment/InsertionSort/Simulation' element={<><ExperimentHeader sml="text-white underline"/><Simulation/><Footer/></>}/>
 

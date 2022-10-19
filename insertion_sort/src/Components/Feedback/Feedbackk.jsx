@@ -1,76 +1,69 @@
-// import Question from './Question';
 import { Form, TextArea, Button } from 'semantic-ui-react';
 import "./style.css";
 import StarRating from './StarRating';
-// import Swal from 'sweetalert2';
 import * as emailjs from 'emailjs-com';
 import { useFormik } from 'formik';
-// import { hasFormSubmit } from '@testing-library/user-event/dist/utils';
-
-
+import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
+import Responses from './Responses';
 
 const Feedbackk = (props) => {
 
-    // const handleSubmit = e => {
-    //     console.log('hii')
-    //     // e.preventDefault();
-    //     console.log(e.values)
-    //     emailjs.sendForm('service_0c16qb3', 'template_weh55km', e.values , 'oVIkX6x9bPg6Ck_gI')
-    //         .then((result) => {
-    //             alert("Form submitted")
-    //         }, (error) => {
-    //             alert("Something went wrong")
-    //         });
-    //     e.target.reset()
-    // }
+    const navigate = useNavigate();
+
     const formik = useFormik({
         initialValues: {
             from_name: '',
             email: '',
             iname: '',
             problems: '',
-            feedback: ''
+            feedback: '',
+            practicals: '',
         },
-        onSubmit:(values,{resetForm}) =>{
-            console.log('hii')
-            console.log(values)
-        // e.preventDefault();
-            
-            emailjs.send('service_0c16qb3', 'template_weh55km', values , 'oVIkX6x9bPg6Ck_gI')
+        onSubmit: (value, { resetForm }) => {
+            console.log(value);
+           
+            emailjs.send('service_0c16qb3', 'template_weh55km', value, 'oVIkX6x9bPg6Ck_gI')
                 .then((result) => {
-                    alert("Form submitted")
-                    
+                    // alert("Form submitted")
+                    navigate("/Thankyou");
+
                 }, (error) => {
                     alert("Something went wrong")
 
                 });
-                resetForm({values: ''});
-            // resetForm();
+            resetForm();
+
 
         },
 
-
-        validate: values => {
+        validate: value => {
             let errors = {};
-            if (!values.from_name) {
+            if (!value.from_name) {
                 errors.from_name = "Required"
             }
-            if (!values.email) {
+            if (!value.email) {
                 errors.email = "Required"
             }
-            if (!values.iname) {
+            if (!value.iname) {
                 errors.iname = "Required"
             }
-            if (!values.problems) {
+            if (!value.problems) {
                 errors.problems = "Required"
+            } else if (value.problems.length < 5){
+                    errors.problems = 'Problems should be more than 5 characters.'
             }
-            if (!values.feedback) {
+            if (!value.feedback) {
                 errors.feedback = "Required"
+            } else if (value.feedback.length < 5){
+                    errors.feedback = 'Feedback must contain more than 5 characters.'
+            }
+            if (!value.practicals) {
+                errors.practicals = "Required"
             }
             return errors;
         },
     })
-    // console.log(formik.touched)
     return (
         <div className="bg-image bg-no-repeat bg-cover">
             <div className='p-5 m-2 opacity-90'>
@@ -85,13 +78,13 @@ const Feedbackk = (props) => {
                                             <label className="block text-gray-700 text-md font-bold mb-2">
                                                 {items.label}
                                             </label>
-                                            <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline required hover:border-gray-500"
+                                            <input className={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline required hover:border-gray-500 ${formik.touched[items.id] && formik.errors[items.id] ? 'border-red-400' : 'border-none'}`}
                                                 name={items.id}
                                                 placeholder={items.placeholder}
                                                 type={items.type}
                                                 onChange={formik.handleChange}
                                                 onBlur={formik.handleBlur}
-                                                values={formik.values.name}
+                                                value={formik.values.name}
                                             />
 
                                             {formik.touched[items.id] && formik.errors[items.id] ? <div className='text-red-600'>{formik.errors[items.id]}</div> : null}
@@ -104,12 +97,13 @@ const Feedbackk = (props) => {
                                 <label className="block text-gray-700 text-md font-bold mb-2">
                                     Name of Experiment Performed
                                 </label>
-                                <select name="practicals" className="block appearance-none w-full bg-white border hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
-                                    <option value="none" selected disabled hidden>Select the name of Experiment</option>
-                                    <option>Merge Sort</option>
-                                    <option>Insertion Sort</option>
-                                    <option>Bubble Sort</option>
+                                <select name="practicals" id='practicals' value={formik.values.practicals} onChange={formik.handleChange} className={`block appearance-none w-full bg-white border hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline ${formik.touched.practicals && formik.errors.practicals ? 'border-red-400' : 'border-none'}`}>
+                                    <option value="none" selected hidden>Select the name of Experiment</option>
+                                    <option value="Merge Sort">Merge Sort</option>
+                                    <option value="Insertion Sort">Insertion Sort</option>
+                                    <option value="Bubble Sort">Bubble Sort</option>
                                 </select>
+                                {formik.touched.practicals && formik.errors.practicals ? <div className='text-red-600'>{formik.errors.practicals}</div> : null}
                             </div>
                             <div>
                                 {
@@ -119,7 +113,7 @@ const Feedbackk = (props) => {
                                                 <label className="block text-gray-700 text-md font-bold mb-2">
                                                     {items3.label}
                                                 </label>
-                                                <TextArea className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline resize-none hover:border-gray-500" type={items3.type} name={items3.id} onChange={formik.handleChange} onBlur={formik.handleBlur} values={formik.values.name} />
+                                                <TextArea className={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline required hover:border-gray-500 ${formik.touched[items3.id] && formik.errors[items3.id] ? 'border-red-400' : 'border-none'}`} type={items3.type} name={items3.id} onChange={formik.handleChange} onBlur={formik.handleBlur} value={formik.values.name} />
                                                 {formik.touched[items3.id] && formik.errors[items3.id] ? <div className='text-red-600'>{formik.errors[items3.id]}</div> : null}
                                             </div>
                                         );
@@ -133,18 +127,22 @@ const Feedbackk = (props) => {
                                 props.items2.map((items2) => {
                                     return (
                                         <div className="mb-4" >
-                                            <label className="block text-gray-700 text-md font-bold mb-2">
+                                            <label className="block text-gray-700 text-md font-bold mb-2" name={items2.desc}>
                                                 {items2.desc}
                                             </label>
                                             <StarRating />
+                                            {/* <Responses/> */}
                                         </div>
                                     );
                                 }
                                 )}
                             <div className="flex justify-end">
-                                <Button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit" >
+                                <Button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
                                     Submit
                                 </Button>
+                                {/* <Button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="reset">
+                                    Reset
+                                </Button> */}
                             </div>
                         </div>
                     </div>

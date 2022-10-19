@@ -14,7 +14,7 @@ const ExperimentHeader=(props)=>{
                 <Link to='/Experiment/InsertionSort/Aim'><li className={props.stl}>Aim</li></Link>
                   <Link to='/Experiment/InsertionSort/Theory'> <li className={props.th}>Theory</li></Link>
                     <Link to='/Experiment/InsertionSort/Practice'><li className={props.pr}>Practice</li></Link>
-                    <li className=''>Procedure</li>
+                    <Link to='/Experiment/InsertionSort/Procedure'><li className={props.pc}>Procedure</li></Link>
                     <Link to='/Experiment/InsertionSort/Simulation'><li className={props.sml}>Simulation</li></Link>
                     <Link to='/Experiment/InsertionSort/Posttest'><li className={props.pst}>Posttest</li></Link>
 
