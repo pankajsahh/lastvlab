@@ -7,15 +7,15 @@ const Theory = () => {
   return (
     <>
     <ExperimentHeader th='text-white underline'/>
-    <div className='flex justify-around pb-5 '>
+    <div className='sm:flex justify-around pb-5 '>
         <div className='m-10 p-5'>
         <h3 className='font-rubik text-center p-7 text-3xl tracking-wider text-slate-500'>Theory</h3>
-        <small className='font-thin text-lg'>Insertion sort is a simple sorting algorithm 
+        <small className='text-sm font-thin sm:text-lg'>Insertion sort is a simple sorting algorithm 
         that works similar to the way you sort playing cards in your hands. The array is 
         virtually split into a sorted and an unsorted part. Values from the unsorted part 
         are picked and placed at the correct position in the sorted part.</small><br/><br/>
         <h4 className='text-lg underline font-bold text-slate-500'>Charactertistic of Insertion Sort</h4>   
-        <ul className='font-thin text-lg list-disc'>
+        <ul className='text-sm font-thin sm:text-lg list-disc'>
           <li>It is an efficient algorithm for sorting a small number of elements.</li>
           <li>It is an inplace algorithm i.e. it rearranges the number within an array.</li>
           <li>It is a stable algorithm i.e. it maintains the relative order of elements.</li>
@@ -24,7 +24,7 @@ const Theory = () => {
         </ul><br />
         <h4 className='text-lg underline font-bold text-slate-500'>Insertion Sort Algorithm</h4>
         <small className='text-lg font-thin'>In order to sort an array in ascending order:</small>
-        <ul className='font-thin text-lg list-disc'>
+        <ul className='text-sm font-thin sm:text-lg list-disc'>
           <li>Iterate from arr[1] to arr[n-1] over the array.</li>
           <li>Compare the current element (key) to its predecessor.</li>
           <li>If the key element is smaller than its predecessor, compare it to the elements before.</li>

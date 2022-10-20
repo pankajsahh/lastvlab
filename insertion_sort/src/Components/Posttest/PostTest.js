@@ -7,15 +7,15 @@ function PostTest() {
   // Question number to display in quiz box randomly 
   const[questionIndex,setQuestionIndex]=useState(0);
   let ch = <>
-    <ul className="list-decimal list-inside text-black">
-      <li className="font-bold text-left text-lg">This quiz consists of seven questions.</li>
-      <li className="font-bold text-left text-lg">Four options will be given to each question.</li>
-      <li className="font-bold text-left text-lg">You cannot change your answer once it is selected.</li>
-      <li className="font-bold text-left text-lg">You cannot move to next question before attempting the current question.</li>
-      <li className="font-bold text-left text-lg">At the end of the quiz, your score will be displayed.</li>
-      <li className="font-bold text-left text-lg">Move to next question by clicking "Next" button.</li>
-      <li className="font-bold text-left text-lg">Restart the quiz by clicking "Try Again" button.</li>
-      <li className="font-bold text-left text-lg">Start the quiz by clicking "Start Quiz" button.</li>
+    <ul className="list-decimal list-inside text-black text-xs sm:text-lg">
+      <li className="font-bold text-right sm:text-left">This quiz consists of seven questions.</li>
+      <li className="font-bold text-right sm:text-left">Four options will be given to each question.</li>
+      <li className="font-bold text-right sm:text-left">You cannot change your answer once it is selected.</li>
+      <li className="font-bold text-right sm:text-left">You cannot move to next question before attempting the current question.</li>
+      <li className="font-bold text-right sm:text-left">At the end of the quiz, your score will be displayed.</li>
+      <li className="font-bold text-right sm:text-left">Move to next question by clicking "Next" button.</li>
+      <li className="font-bold text-right sm:text-left">Restart the quiz by clicking "Try Again" button.</li>
+      <li className="font-bold text-right sm:text-left">Start the quiz by clicking "Start Quiz" button.</li>
 
     </ul></>
   const question = [
@@ -223,7 +223,7 @@ function PostTest() {
      setQuestionIndex(ind);}
   }
   return (
-    <div className="main">
+    <div className="main flex-col md:flex-row">
       <div className='appTest bg-gradient-to-r from-indigo-400 to-sky-300'>
         {showScore ? (
           <>
