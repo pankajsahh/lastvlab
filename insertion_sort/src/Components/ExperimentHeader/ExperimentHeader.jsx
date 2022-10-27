@@ -5,7 +5,7 @@ const ExperimentHeader=(props)=>{
     const menuSelect=()=>{
         let list =document.querySelector('ul');
         let ico=document.querySelector('#menu');
-        if(ico.name=="menu-outline"){ico.name="close-outline"
+        if(ico.name==="menu-outline"){ico.name="close-outline"
         list.classList.remove('hidden')
         
         list.classList.add('bg-blue-200');

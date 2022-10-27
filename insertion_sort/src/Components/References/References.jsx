@@ -1,6 +1,5 @@
 
 import React from "react";
-import { Link } from "react-router-dom";
 import img3 from "./img3.png";
 
 const References=()=>{
@@ -18,7 +17,7 @@ India. Additional Resources</li>
 
                 </ul>
             </div>
-            <img className="mt-10" src={img3}/>
+            <img alt='reference' className="mt-10" src={img3}/>
         </div>
     );
 }

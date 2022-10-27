@@ -148,11 +148,11 @@ function PostTest() {
     // mark the correct option on selection of wrong answer 
     question[questionIndex].answersOptions.filter((value, index) => {
       if (value.isCorrect) {
-        document.getElementById(index).style.backgroundColor = "Green"
+        return document.getElementById(index).style.backgroundColor = "Green"
       }
     })
 
-    if (currentQuestion == 0) {
+    if (currentQuestion === 0) {
       nextQue(); //In case of start quiz ,auto move to next 
     }
 
@@ -165,7 +165,7 @@ function PostTest() {
     btns.forEach(btn => btn.disabled = false)
 
     // set bg colour of all the options to the default 
-    if (currentQuestion != 0) {
+    if (currentQuestion !== 0) {
       document.getElementById(0).style.backgroundColor = "#252d4a";
       document.getElementById(1).style.backgroundColor = "#252d4a";
       document.getElementById(2).style.backgroundColor = "#252d4a";
@@ -174,7 +174,7 @@ function PostTest() {
 
     } else document.getElementById(0).style.backgroundColor = "#252d4a";
 
-    if (currentQuestion == 0) {
+    if (currentQuestion === 0) {
       setVisiblity('visible')
     }
 
