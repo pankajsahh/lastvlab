@@ -321,10 +321,10 @@ const Simulation=()=>{
     // set message that display on hover of submit button 
        const[info,setInfo]=useState('');
     return (
-        <div className="flex justify-evenly m-5">
+        <div className="xl:flex justify-evenly m-5">
 
             {/* Input box */}
-            <div className="border-slate-300 border-4 h-96 p-5 w-1/3 relative">
+            <div className="border-slate-300 border-4 h-96 p-5 w-full md:w-2/3 xl:w-1/3 relative">
                 <h2 className="text-center text-2xl font-bold  text-black rounded shadow-md z-10  m-auto mb-5  w-max">Input</h2>
                 
                 <label htmlFor="size" className=" font-semibold tracking-wide text-xl">Array size:- </label>
@@ -332,9 +332,13 @@ const Simulation=()=>{
                 {errors.size?<div className="text-red-500 m-0 absolute top-24 left-32">{errors.size}</div>:null}
                 <br></br>
                 
-                <button className="p-2 bg-gradient-to-r from-sky-500 to-indigo-500 text-white m-2 rounded btns absolute left-0 shadow-md z-10"  onClick={generateElements} >Random elements.</button>
-                
-                <button className="p-2 bg-gradient-to-r from-sky-500 to-indigo-500 text-white m-2 rounded btns absolute right-0 space-x-1 shadow-md z-10" onClick={generateInput}>Enter elements manually</button>
+                <div className=" ">
+                    <div>
+                <button className="lg:p-2 sm:p-1 sm:text-sm lg:first-letter lg:text-base  bg-gradient-to-r from-sky-500 to-indigo-500 text-white m-2 lg:m-1 rounded btns  md:absolute sm:static    left-0 shadow-md z-10"  onClick={generateElements} >Random elements.</button></div>
+                <div>
+                <button className="lg:p-2 sm:p-1 sm:text-sm lg:text-base bg-gradient-to-r from-sky-500 to-indigo-500 text-white lg:m-2 sm:m-1 rounded btns   md:absolute sm:static right-0 space-x-1 shadow-md z-10" onClick={generateInput}>Enter elements manually</button></div>
+                </div>
+
                 <button className="p-2 bg-gradient-to-r from-sky-500 to-indigo-500 text-white m-2 rounded btns absolute bottom-0 right-0 shadow-md z-10" onClick={algorithm}>Start.</button><br/>
                {flag?<div className="w-full absolute top-48 left-auto"><input type='text' placeholder="White space between elements" className="rounded border-2 border-black w-64 shadow-md z-10" id='manual' value={manual} onChange={handleManual}></input>
                <div className="inline-block group"><button type="submit" className="p-2 bg-gradient-to-r from-sky-500 to-indigo-500 text-white m-2 rounded shadow-md z-10 " id='submit' onClick={generateManualArray}>Submit</button><p className='absolute top-2 left-auto -right-1  bg-white text-black p-0 z-10 group-hover:visible invisible text-sm'>Double Click</p></div>
@@ -344,7 +348,7 @@ const Simulation=()=>{
 
                 {/* Code Box */}
                 
-            <div className="border-slate-300 border-4 h-96 p-5 w-1/3">
+            <div className="border-slate-300 border-4 h-96 p-5 w-full md:w-2/3 xl:w-1/3">
                 <h2 className="text-center font-bold text-2xl   text-black rounded shadow-md z-10  m-auto mb-5 w-max">Code</h2>
                 <div className="font-bold -tracking-wider text-xl ">
                <p id='101'>for(i=1;i&lt;{array.length};i++)</p>
@@ -359,7 +363,7 @@ const Simulation=()=>{
             </div>
 
             {/* Output Box  */}
-            <div className="border-slate-300 border-4 h-96 p-5 w-2/3 text-center">
+            <div className="border-slate-300 border-4 h-96 p-5 xl:w-2/3 md:w-2/3 w-full text-center">
                 <h2 className="text-center font-bold text-2xl  text-black rounded shadow-md z-10  m-auto mb-5 w-max">Output</h2>
                 <div className="mt-5">{boxes}</div>
                 {boxes ?
@@ -369,7 +373,7 @@ const Simulation=()=>{
                 <div className="font-bold text-xl border-2 border-black mt-4 inline-block p-2" >J={jth}</div>
 
                 <div className="font-bold text-xl border-2 border-black mt-4 inline-block p-2" id="keyBox">Key={key}</div>
-                <div className="mt-10"><p className="text-red-500 text-lg font-semibold">{statement}</p></div></div>:<h2 className="font-bold text-xl tracking-wide">Please enter array size and click generateElements.</h2>}
+                <div className="mt-10"><p className="text-red-500 text-lg font-semibold">{statement}</p></div></div>:<h2 className="font-bold xl:text-xl tracking-wide">Please enter array size and click RandomElements.</h2>}
             </div>
         </div>
     );
