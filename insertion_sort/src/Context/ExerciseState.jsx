@@ -27,12 +27,15 @@ const ExerciseState=(props)=>{
         // if user clicks the next button after clicking on try again button
        
         console.log(exerciseCount)
-        setExerciseCount(exerciseCount+1)
+        setExerciseCount(exerciseCount+1);
     }
     const prevExercise=()=>{
         setExerciseCount(exerciseCount-1)
     }
     const changeExercise=(c)=>{
+        console.log("hello change Exercize",c)
+        // If show answer button is clicked 
+       
         setExerciseCount(c);
     }
     return (
