@@ -32,10 +32,7 @@ const ExerciseState=(props)=>{
     const prevExercise=()=>{
         setExerciseCount(exerciseCount-1)
     }
-    const changeExercise=(c)=>{
-        console.log("hello change Exercize",c)
-        // If show answer button is clicked 
-       
+    const changeExercise=(c)=>{       
         setExerciseCount(c);
     }
     return (

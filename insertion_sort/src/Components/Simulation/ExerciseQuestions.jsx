@@ -6,14 +6,32 @@ const ExerciseQuestions = (props) => {
   // import the useContext
   const count=useContext(ExerciseContext);
 
-  const que0=<pre>for(i=0;i&#60; <input maxLength='1' className='w-4' id='res'></input>; i++)</pre>
-  const que1=<pre><input maxLength='4' className='w-12' id='res'/> = <input maxLength='6' className='w-16' id='res1'></input>;</pre>
+  // First question code
+  const que0=<pre>for(i=0;i&#60; <input maxLength='1' className='w-4' id='res' ></input>; i++)<br/>
+  <input maxLength='14' className='w-34 ml-8' id='res1'/></pre>
+
+  // second question code 
+  const que1=<pre><input maxLength='4' className='w-12' id='res'/> = <input maxLength='6' className='w-16 ' id='res1'></input>;</pre>
+// third question code 
+  const que2=<pre>temp        =<input maxLength='6' className='w-24 ml-2 res' id='res' ></input><br/>
+  <input maxLength='6' className='w-24 my-1 ' id='res_' ></input>   =<input maxLength='6' className='w-24 res1 my-1'></input><br/>
+  <input maxLength='6' className='w-24 res1' ></input>   =<input maxLength='4' className='w-24 ' id='res2'></input>
+  </pre>
+
+  // Fourth question code
+  const que3=<pre>Sum    =<input maxLength='6' className='w-16 ml-2' id='res' ></input> + <input maxLength='6' className='w-16 ml-2 ' id='res1' ></input></pre>
+
+  // Fifith question code 
+  const que4=<pre> int i=0; <br/>while<input maxLength='5' className='w-16 ' id='res' ></input>&#123;
+  <br/><input maxLength='13' className='w-[128px] ml-16 mt-1' id='res1' ></input>
+  <br/>     i++; &#125;</pre>
 
    const question=[
         {
-            question:"Complete for loop syntax to run a code 5 times.",
+            question:"Complete for loop to display 'Hello' five times.",
             code:que0,
-            answer:4
+            answer:5,
+            answer1:'cout<<"Hello";'
         },
         {
           question:"Store the third element of array arr[]={3,1,2,5,4} in a varible 'temp'.",
@@ -22,19 +40,23 @@ const ExerciseQuestions = (props) => {
           answer1:'arr[2]'
       },
       {
-        question:"Complete for loop syntax to run a code 6 times.",
-        code:que0,
-        answer:4
+        question:"Swap first and second element of the array arr[]={3,1,2,4,5}.",
+        code:que2,
+        answer:'arr[0]',
+        answer1:'arr[1]',
+        answer2:'temp'
     },
     {
-      question:"Complete for loop syntax to run a code 7 times.",
-      code:que0,
-      answer:5
+      question:"Store sum of maximum and minimum elements of the array arr[]={3,1,2,4,5}.",
+      code:que3,
+      answer:'arr[1]',
+      answer1:'arr[4]'
   },
   {
-    question:"Complete for loop syntax to run a code 8 times.",
-    code:que0,
-    answer:6
+    question:"Print all elements of the array arr[]={3,1,2,4,5} Using while loop.",
+    code:que4,
+    answer:'(i<5)',
+    answer1:'cout<<arr[i];'
 }
     ]
 
@@ -77,28 +99,23 @@ const ExerciseQuestions = (props) => {
               
            //  validate answer
 
-          //  validate answer for exercise 1\
-          if(count.exerciseCount==0){
-         if(ele.value==question[count.exerciseCount].answer){
-         correct();
-         }else{
-         inCorrect();
-         }
-        }
-        // validate answer for exercise 2
-        else if(count.exerciseCount==1){
-          
-          if(ele.value==question[count.exerciseCount].answer1 && ele1.value==question[count.exerciseCount].answer){
-               correct();
+          //  validate answer for all exercise, except exercise 3
+         if(count.exerciseCount!=2){
+          if(ele.value==question[count.exerciseCount].answer && ele1.value==question[count.exerciseCount].answer1){
+            correct();
           }else inCorrect();
-        }
+         }else{// validate anser for exercise 3, it has 4 input box
+            const ele_=document.getElementById('res_');
+            const ele2=document.getElementsByClassName('res1');
+            const ele3=document.getElementById('res2');
+           if((ele.value && ele_.value)==question[count.exerciseCount].answer &&((ele2[0].value&& ele2[1].value)==question[count.exerciseCount].answer1) && ele3.value==question[count.exerciseCount].answer2 ){
+            correct();
+           }else inCorrect();
+         }
 
         //  case 2: User clicks Try Again
 
-        }else if (submitBtn.innerText=='Try Again'){
-       
-          submitBtn.innerText='Submit Answer'
-          document.getElementById('showButton').addEventListener('click',showAnswer)
+      
 
         }
         // case 3: If user clicks on next exercise 
@@ -108,7 +125,6 @@ const ExerciseQuestions = (props) => {
         
           // set the button text 
           submitBtn.innerText='Submit Answer'
-          document.getElementById('showButton').addEventListener('click',showAnswer);
 
         }
         
@@ -122,18 +138,55 @@ const ExerciseQuestions = (props) => {
       console.log("Show answer button.")
       // access the button 
       const btn=document.getElementById('showButton');
-      const ele=document.getElementById('res');
-      if(btn.innerText=='Show Answer'){
-        console.log("hii")
+      // access both the input box 
+      let ele=document.getElementById('res');
+      let ele1=document.getElementById('res1');
+      if(btn.innerText=='Show Answer'){ //show answer for first exercise 
         btn.innerText='Hide Answer';
-       ele.value=question[count.exerciseCount].answer;
+
+     
+       if(count.exerciseCount==2){ // show answer for third exercise
+          const q3e1=document.getElementsByClassName('res');
+          q3e1[0].value=question[count.exerciseCount].answer;
+          // I can access the second input using class name. But currently different answer is getting displayed even I am assigning the same value. So, did a different approach.
+          document.getElementById('res_').value=question[count.exerciseCount].answer;
+
+          const q3e2=document.getElementsByClassName('res1');
+          q3e2[0].value=question[count.exerciseCount].answer1;
+          q3e2[1].value=question[count.exerciseCount].answer1;
+
+          const ele3=document.getElementById('res2');
+          ele3.value=question[count.exerciseCount].answer2;
+          document.getElementsByClassName('res')[1].value=question[count.exerciseCount].answer1;
+      }else { // show answer in the both input box.
+        ele.value=question[count.exerciseCount].answer;
+        ele1.value=question[count.exerciseCount].answer1;
+      }
+
+       
       //  disable the submit button
       document.getElementById('answerButton').style.display='none'
 
     }
        else{ 
         btn.innerText='Show Answer';
-        ele.value=''
+       if(count.exerciseCount==2){
+          // erase value from third exercise
+          const q3e1=document.getElementsByClassName('res');
+          q3e1[0].value='';
+          document.getElementById('res_').value='';
+
+
+          const q3e2=document.getElementsByClassName('res1');
+          q3e2[0].value='';
+          q3e2[1].value='';
+
+          document.getElementById('res2').value='';
+
+        }else { //erase value from the input box.
+          ele.value='';
+          ele1.value='';
+        }
         // enable the submit button
         document.getElementById('answerButton').style.display='block'
        }
