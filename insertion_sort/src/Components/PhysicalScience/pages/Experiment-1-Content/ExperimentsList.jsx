@@ -17,8 +17,10 @@ export default function ExperimentsList() {
           <MDBCardText className="text-secondary " style={{color:"#e5e7eb"}}>
           find the statistical analysis of a given dataframe.
           </MDBCardText>
-          <Link to="/physical-science/Pandas/"></Link>
+          <Link to="/physical-science/Pandas/">
           <MDBBtn color="secondary">GO TO Experiment</MDBBtn>
+          </Link>
+          
         </MDBCardBody>
       </MDBCard>
      
