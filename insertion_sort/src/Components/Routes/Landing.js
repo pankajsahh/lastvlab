@@ -32,13 +32,42 @@ import PostTest from '../Posttest/PostTest';
 import UserTest from '../Simulation/UserTest';
 import Thankyou from '../Feedback/Thankyou';
 
+import Navbar from '../PhysicalScience/Header/Navbar'
+import PandasFooter from '../PhysicalScience/footer/Footer'
+import ExpNav from '../PhysicalScience/pages/Experiment-Nav/ExpNav'
+import PandasAim from '../PhysicalScience/pages/Experiment-1-Content/PandasAim'
+import PandasQuizz from '../PhysicalScience/pages/Experiment-1-Content/PandasQuizz'
+import PandasTheory from '../PhysicalScience/pages/Experiment-1-Content/PandasTheory'
+import PandasProcedure from '../PhysicalScience/pages/Experiment-1-Content/procedure/Procedure'
+import PandasReference from '../PhysicalScience/pages/Experiment-1-Content/PandasReferences'
+import PandasSimulationExp1 from '../PhysicalScience/pages/Experiment-1-Content/Simulator/Simulation_exp1'
+import PandasPracticeExp1 from '../PhysicalScience/pages/Experiment-1-Content/PandasPractice_exp1'
+import PandasObjective from '../PhysicalScience/pages/Experiment-1-Content/PandasObjective'
+import ExperimentsList from '../PhysicalScience/pages/Experiment-1-Content/ExperimentsList';
+
 
 const Landing =()=>{
     return (
         
         <Router>      
             <Routes>
-            <Route path='/' element={<><Header stl="text-white underline" /><LandingContent/><Footer/></>}/>
+
+            <Route path='/' element={<><Navbar /><LandingContent/><PandasFooter /></>}/>
+            <Route path='/physical-science/' element={<><Navbar /><ExperimentsList /><PandasFooter /></> }/>
+            
+            <Route path='/physical-science/Pandas/' element={<><Navbar /><ExpNav /><PandasFooter /></> }>
+              <Route path='' element={<PandasAim />} />
+              <Route path='Quizz/' element={<PandasQuizz /> } />
+              <Route path='Objective/' element={<PandasObjective />} />
+              <Route path='Theory/' element={<PandasTheory />} />
+              <Route path='Procedure/' element={<PandasProcedure />} />
+              <Route path='Reference/' element={<PandasReference />} />
+              <Route path='Simulation/' element={<PandasSimulationExp1 />} />
+              <Route path='Practice/' element={<PandasPracticeExp1 />} />
+            </Route>
+           
+
+
             <Route path='/Introduction' element={<><Header in="text-white underline"/><Introduction/><Footer/></>}/>
 
             <Route path='/Objective' element={<><Header ob="text-white underline"/><Objective/><Footer/></>}/>

@@ -324,7 +324,7 @@ const Simulation=()=>{
         <div className="xl:flex justify-evenly m-5">
 
             {/* Input box */}
-            <div className="border-slate-300 border-4 h-96 p-5 w-full md:w-2/3 xl:w-1/3 relative">
+            <div className="border-slate-300 border-4  p-5 w-full md:w-2/3 xl:w-1/3 relative">
                 <h2 className="text-center text-2xl font-bold  text-black rounded shadow-md z-10  m-auto mb-5  w-max">Input</h2>
                 
                 <label htmlFor="size" className=" font-semibold tracking-wide text-xl">Array size:- </label>
@@ -348,7 +348,7 @@ const Simulation=()=>{
 
                 {/* Code Box */}
                 
-            <div className="border-slate-300 border-4 h-96 p-5 w-full md:w-2/3 xl:w-1/3">
+            <div className="border-slate-300 border-4 p-5 w-full md:w-2/3 xl:w-1/3">
                 <h2 className="text-center font-bold text-2xl   text-black rounded shadow-md z-10  m-auto mb-5 w-max">Code</h2>
                 <div className="font-bold -tracking-wider text-xl ">
                <p id='101'>for(i=1;i&lt;{array.length};i++)</p>
@@ -363,7 +363,7 @@ const Simulation=()=>{
             </div>
 
             {/* Output Box  */}
-            <div className="border-slate-300 border-4 h-96 p-5 xl:w-2/3 md:w-2/3 w-full text-center">
+            <div className="border-slate-300 border-4  p-5 xl:w-2/3 md:w-2/3 w-full text-center">
                 <h2 className="text-center font-bold text-2xl  text-black rounded shadow-md z-10  m-auto mb-5 w-max">Output</h2>
                 <div className="mt-5">{boxes}</div>
                 {boxes ?

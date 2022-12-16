@@ -1,0 +1,142 @@
+
+
+
+.navbar {
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+
+}
+.navbar__links {
+    flex:1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.navbar__links-logo {
+    margin-right: 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+.navbar__links-logo img {
+    width: 65px;
+    height: 65px;
+}
+
+.navbar__links-logo h6{
+    color: #fff;
+    margin-left:1.5rem ;
+    letter-spacing: 3px;
+    font-size: 25px;
+
+}
+
+.navbar__links-container{
+    display: flex;
+    flex-direction: row;
+    margin-right: 2rem;
+}
+
+
+.navbar__links-container p ,
+.navbar__menu-container p {
+    color:rgb(15, 15, 15);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+    text-transform: capitalize;
+    cursor: pointer;
+    margin : 0 1rem;
+    padding: 5px 0px;
+    
+
+}
+
+.navbar__links-container p :hover,
+.navbar__menu-container p :hover{
+    border-bottom: 3.2px solid #fa7979;
+    transition: ease-in;
+}
+
+
+.navbar__menu{
+    margin: 0 0 0 1rem;
+    display: none;
+    position: relative;
+}
+
+.navbar__menu-container{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
+
+    text-align: end;
+    background: var(--color-bg);
+    padding: 2rem;
+    position: absolute;
+    top : 40px;
+    right:0;
+    margin: 1rem 0 0 0;
+    min-width: 210px;
+    border-radius: 5px;
+    box-shadow: 0 0 5 rgba(0,0,0,0.2);
+
+}
+.navbar__menu-container p{
+    margin:1rem 0 ;
+}
+.navbar__menu-container p a ,
+.navbar__links-container p a{
+    color: #fff;
+   
+}
+.navbar__menu__container-links-sign{
+    display: none;
+}
+
+
+/* responsive togglemenu */
+
+@media screen and (max-width : 1050px) {
+    .navbar__links-container{
+        display: none;
+    }
+    .navbar__menu{
+        display: flex;
+    }
+    
+}
+
+@media screen and (max-width : 700px) {
+    .navbar{
+        padding: 2rem 4rem;
+    }
+    
+    
+}
+
+@media screen and (max-width : 600px) {
+    .navbar{
+        padding: 1.5rem
+    }   
+    .navbar__menu-container{
+        top:20px
+    }
+    .navbar__links-logo h6{
+        font-size: 15px;
+        letter-spacing: 1.5px;
+
+    }
+    .navbar__links-logo img{
+        height: 40px;
+        width: 40px;
+    }
+}

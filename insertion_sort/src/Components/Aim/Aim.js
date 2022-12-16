@@ -12,7 +12,7 @@ export default function Aim() {
     //     </div>
     //     <img src={aim} alt="Can't Load." className='h-96 mr-5 p-5'></img>
     // </div>
-    <div className=' fixed h-3/5'>
+    <div className='  h-3/5'>
     <div className='sm:flex justify-around pb-'>
         <div className='sm:m-10 sm:p-5 text-center mt-2 '>
             <h3 className='font-rubik text-center px-7 pt-2 sm:text-3xl lg:p-7 tracking-wider '>Aim</h3>
